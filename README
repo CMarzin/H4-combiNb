@@ -1,4 +1,4 @@
-H4 Combinb
+Myapp
 ================
 
 Rails Composer is supported by developers who purchase our RailsApps tutorials.
@@ -17,7 +17,7 @@ choose  Enter your selection: [puma]
 option  Web server for production?
 choose  Enter your selection: [puma]
 option  Database used in development?
-choose  Enter your selection: [mysql]
+choose  Enter your selection: [postgresql]
 option  Template engine?
 choose  Enter your selection: [erb]
 option  Test framework?
@@ -43,7 +43,7 @@ choose  Enter your selection: [about+users]
 option  Set a locale?
 choose  Enter your selection: [none]
 option  Install page-view analytics?
-choose  Enter your selection: [none]
+choose  Enter your selection: [ga]
 option  Add a deployment mechanism?
 choose  Enter your selection: [heroku]
 option  Set a robots.txt file to ban spiders?
