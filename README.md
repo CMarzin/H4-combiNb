@@ -1,8 +1,24 @@
-# Projet airbnb like 
+# README
 
-[![Build Status](https://travis-ci.org/CMarzin/H4-combiNb.svg?branch=master)](https://travis-ci.org/CMarzin/H4-combiNb)
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-- Ruby on rails
+Things you may want to cover:
 
-We use git flow to organize our workflow :
-- https://danielkummer.github.io/git-flow-cheatsheet/
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
