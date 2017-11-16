@@ -1,6 +1,6 @@
 # Projet airbnb like 
 
-https://travis-ci.org/CMarzin/H4-combiNb.svg?branch=master
+[![Build Status](https://travis-ci.org/CMarzin/H4-combiNb.svg?branch=master)](https://travis-ci.org/CMarzin/H4-combiNb)
 
 - Ruby on rails
 
