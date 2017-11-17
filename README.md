@@ -1,4 +1,4 @@
-Myapp
+Myapp [![Build Status](https://travis-ci.org/CMarzin/H4-combiNb.svg?branch=master)](https://travis-ci.org/CMarzin/H4-combiNb)
 ================
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
