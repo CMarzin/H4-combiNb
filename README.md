@@ -31,6 +31,53 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 Getting Started
 ---------------
 
+First of all you need to install all the gem, in your directory type :
+```
+gem install
+```
+then 
+```
+bundler install
+```
+
+if you have some front dependencies run 
+```
+yarn
+```
+In order to run the application you need to have postgres
+
+If you don't have postgres you can install it with this command ( on Mac OSX ) :
+```
+brew install postgresql
+```
+Now you can enter the bdd
+```
+psql postgres
+```
+If you don't have a role without superadmin 
+```
+CREATE ROLE username WITH LOGIN PASSWORD 'password';
+```
+Give you to the role the right to create db 
+```
+ALTER ROLE username CREATEDB; 
+```
+you need to quit the db and login with you new role
+```
+\d
+```
+Now you do
+```
+psql postgres -U username
+```
+and finally
+```
+CREATE DATABASE super_awesome_application;
+```
+
+Learn more about [Installing Postgres](https://www.codementor.io/devops/tutorial/getting-started-postgresql-server-mac-osx)
+Learn more about [Postgres](https://www.postgresql.org).
+
 Documentation and Support
 -------------------------
 

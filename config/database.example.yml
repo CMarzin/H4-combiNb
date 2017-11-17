@@ -18,8 +18,8 @@ development:
   encoding: unicode
   database: myapp
   pool:     5
-  username: coco
-  password: password
+  username: yourusername
+  password: 
   template: template0
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -46,7 +46,7 @@ test:
   encoding: unicode
   database: myapp_test
   pool:     5
-  username: myapp
+  username: yourusername
   password:
   template: template0
 
@@ -56,6 +56,6 @@ production:
   encoding: unicode
   database: myapp_production
   pool:     5
-  username: myapp
+  username: yourusername
   password:
   template: template0
