@@ -147,4 +147,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# Travis file
+.travis.yml
+
 # End of https://www.gitignore.io/api/node
