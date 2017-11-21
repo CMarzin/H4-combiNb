@@ -44,10 +44,10 @@ test:
   adapter:  postgresql
   host:     localhost
   encoding: unicode
-  database: myapp_test
+  database: postgresql-contoured-20706
   pool:     5
-  username: coco
-  password: password
+  username: postgres
+  password: 
   template: template0
 
 production:
