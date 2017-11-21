@@ -54,8 +54,8 @@ production:
   adapter:  postgresql
   host:     localhost
   encoding: unicode
-  database: myapp_production
+  database: postgresql-contoured-20706
   pool:     5
-  username: coco
-  password: password
+  username: postgres
+  password: 
   template: template0
