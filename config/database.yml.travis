@@ -1,3 +1,16 @@
-test:
+default: &default
   adapter: postgresql
-  database: travis_ci_test
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: myapp_development
+
+test:
+  <<: *default
+  database: myapp_test
+
+production:
+  <<: *default
+  database: myapp_developement
