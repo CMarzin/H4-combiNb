@@ -2,3 +2,7 @@ deploy:
   provider: heroku
   api_key:
     secure: nxxjG4Sj8Lp1vtUZO2+36f1SL8GnKaXuuc9RqIjfhAjm3XsVGMSPpMZVY62aZFMzA3NtnvZKWqdi/GET1YwKHAwCaqUozO1iKghoOUnp1RWc6YR12IRd3c1gQy+P5TmU87OGOQ7I/5dhjCLBxxH/Czf8KswGdwEVWouBo1ccEJPujkNU9Zvoq79t8x0B+cc7UwQcUjJ07jrDzFcnhRQbU0K8yMS1z90TNtjk1jyXWHxFFIxLpqBm0ZmYwRE/CstwLPTnmmY5A8otgBUUo31M8WfOpqssJ+UTjfoUmTVtG8VWqzx5m2QM1H3Y+1q9V3uAnamklhJVISP9Hez0yhE7zv/ORqkvHog7F5+UnB2C4Izz38PABEWHw640kVmZtSI9vCYylM/LWqv5U/2fCa0ke0yqHuVsafrWRxqmZm0un4UoQzKuqv1TDc2bRzsmp2DHvtnsFNf+YTSsdGZx2O+B0tuq8zbLl4GXrRwNHJEx9QSIW0OUZ8PduHzi1ASIO2iNdzOPT+B7+mto/fk2BzjIcNR2F21icm8qtXJQuEgXxkx1greFuDKnsT+I4QluuZIguT5y4J9E3XUSdsj1dQW0tbNJvuk7Y7f5hUHl/QCdCdLoW3YPzZjJCM/E2p5qyv9sYppAzKjVfI97iydatR5p5KQ5m4h4RQt4+6eBgD3Y20o=
+  services:
+  - postgresql
+  before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
