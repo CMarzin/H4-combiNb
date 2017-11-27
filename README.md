@@ -25,6 +25,27 @@ Things you may want to cover:
 
 * Services (job queues, cache servers, search engines, etc.)
 
+## Useful command for the project
+___
+
+* Execute migration
+```sh
+rails db:migrate
+```
+
+* Open the app directly in the browser
+```sh
+heroku open
+```
+* Check the build
+```sh
+travis open
+```
+* Launch dev server
+```sh
+rails server
+```
+
 ## Deployment instructions
 ___
 Before anything make sure you have installed [Heroku cli](https://devcenter.heroku.com/articles/heroku-cli) and [Travis cli](https://github.com/travis-ci/travis.rb#installation)
