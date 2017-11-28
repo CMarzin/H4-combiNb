@@ -5,3 +5,5 @@ deploy:
   app: combnb
   on:
     repo: CMarzin/H4-combiNb
+  run:
+  - rake db:migrate
