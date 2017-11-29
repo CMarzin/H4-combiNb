@@ -1,2 +1,9 @@
 <h1>Home</h1>
 <p>Hello world ! Welcome to combnb</p>
+<p>
+  <% if user_signed_in? %>
+    <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>  
+  <% else %>
+    <%= link_to 'Se connecter', new_user_session_path %>
+  <% end %>
+</p>
