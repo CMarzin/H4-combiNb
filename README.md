@@ -1,6 +1,6 @@
 # README
 
-[![Build Status](https://travis-ci.org/CMarzin/ruby-h4.svg?branch=master)](https://travis-ci.org/CMarzin/H4-combiNb)
+[![Build Status](https://travis-ci.org/CMarzin/H4-combiNb.svg?branch=master)](https://travis-ci.org/CMarzin/H4-combiNb)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
