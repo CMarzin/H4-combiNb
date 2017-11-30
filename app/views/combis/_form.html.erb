@@ -1,0 +1,42 @@
+<%= form_with(model: combi, local: true) do |form| %>
+  <% if combi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(combi.errors.count, "error") %> prohibited this combi from being saved:</h2>
+
+      <ul>
+      <% combi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :marque %>
+    <%= form.text_field :marque, id: :combi_marque %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year, id: :combi_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner %>
+    <%= form.text_field :owner, id: :combi_owner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kilometers %>
+    <%= form.number_field :kilometers, id: :combi_kilometers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fueltype %>
+    <%= form.text_field :fueltype, id: :combi_fueltype %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
