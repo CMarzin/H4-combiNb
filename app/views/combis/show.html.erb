@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marque:</strong>
+  <%= @combi.marque %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @combi.year %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @combi.owner %>
+</p>
+
+<p>
+  <strong>Kilometers:</strong>
+  <%= @combi.kilometers %>
+</p>
+
+<p>
+  <strong>Fueltype:</strong>
+  <%= @combi.fueltype %>
+</p>
+
+<%= link_to 'Edit', edit_combi_path(@combi) %> |
+<%= link_to 'Back', combis_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  marque: MyString
+  year: MyString
+  owner: MyString
+  kilometers: 1
+  fueltype: MyString
+
+two:
+  marque: MyString
+  year: MyString
+  owner: MyString
+  kilometers: 1
+  fueltype: MyString
