@@ -1,0 +1,9 @@
+deploy:
+  provider: heroku
+  api_key:
+    secure: b1/5W4cxNZJ36XFR+YKuDA2Lg3glCPzS4gltXYo8GQ4qQkypbXABgsr+1hVJAjURq2Z6mKZ7wD0ng0IuHmf1lzqOBltXWaQ1rcQRGGla0TmKkQalajBLFihWOpzgYgfTe3aaJI9k2/SxYCNDnUdiqsngavQchfZjXbE/10ZMVgQU7hsGxa91b6ZHu78CGrwgvZS6J0XksPHjmlxE66BkMlTHjVlAT2aYJEV49K0Mf6FAlMLzLwhzj1/7YkYC1fwA8quvG6INEV2drXcu6heB38OP+lCtgHlhTl6blegg7YeAMxpXV3OJqmbLlQmjS+CysiCzPIJsBI0tsCvgROZPL/xNcBUkLlR/QB5AA0CquKZJJ0UyuKDcjGAi0AgQ3eRPFH5k2cBvzDfUtGd3lAu7yCNZiDYE4Kcf23F9cfFKjQJiTr/9ltLDCtB9uhezDhqPs1qhvliQMbGPeI2LvjbUtrupYYwwf3xotBt2lDlnQG+M31ygKdj4qMLS0H0tDGCs2h6O37kwqC7PF4yqSM1ZPZqaKflpWXYVhnapYibvb8naSHj5gJRxrF4B23DNi3N50gIYOTFoXggmE+cPJG30VvdbFhHZuWoPg3otfBfLX6dEhs45J30UlbvcfVWymssbtj0gFogS2ilbhSnFkhcLDj+R5j0tiVQ1/OhNh7BIqSQ=
+  app: combnb
+  on:
+    repo: CMarzin/H4-combiNb
+  run:
+  - rake db:migrate
