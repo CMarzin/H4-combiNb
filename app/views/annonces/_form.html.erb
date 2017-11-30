@@ -1,0 +1,57 @@
+<%= form_with(model: annonce, local: true) do |form| %>
+  <% if annonce.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(annonce.errors.count, "error") %> prohibited this annonce from being saved:</h2>
+
+      <ul>
+      <% annonce.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :annonce_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :annonce_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :annonce_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :creator_id %>
+    <%= form.text_field :creator_id, id: :annonce_creator_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :annonce_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start %>
+    <%= form.text_field :start, id: :annonce_start %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end %>
+    <%= form.text_field :end, id: :annonce_end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :combi_id %>
+    <%= form.text_field :combi_id, id: :annonce_combi_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
