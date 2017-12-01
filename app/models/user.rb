@@ -8,6 +8,8 @@ class User < ApplicationRecord
   # presence = field obligatoire
   validates :username, presence: true, uniqueness: {case_senstive: false}, format: {with: /\A[a-zA-Z0-9 _\.]*\z/}
 
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>"}, default_url:"/assets/images/default_image.jpg"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/ 
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
