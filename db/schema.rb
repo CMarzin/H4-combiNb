@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20171130143032) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "combis", force: :cascade do |t|
+    t.string "marque"
+    t.string "year"
+    t.string "owner"
+    t.integer "kilometers"
+    t.string "fueltype"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

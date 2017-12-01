@@ -38,8 +38,7 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.4.0)
     arel (8.0.0)
     backports (3.10.3)
     bcrypt (3.1.11)
@@ -63,7 +62,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
-    connection_pool (2.2.1)
     crass (1.0.3)
     devise (4.3.0)
       bcrypt (~> 3.0)
@@ -80,12 +78,12 @@ GEM
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.18)
-    gh (0.14.0)
-      addressable
+    gh (0.15.1)
+      addressable (~> 2.4.0)
       backports
       faraday (~> 0.8)
       multi_json (~> 1.0)
-      net-http-persistent (>= 2.7)
+      net-http-persistent (~> 2.9)
       net-http-pipeline
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -113,15 +111,13 @@ GEM
     minitest (5.10.3)
     multi_json (1.12.2)
     multipart-post (2.0.0)
-    net-http-persistent (3.0.0)
-      connection_pool (~> 2.2)
+    net-http-persistent (2.9.4)
     net-http-pipeline (1.0.1)
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
-    public_suffix (3.0.1)
     puma (3.11.0)
     pusher-client (0.6.2)
       json
@@ -238,7 +234,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-  pg
+  pg (~> 0.21)
   puma (~> 3.7)
   rails (~> 5.1.4)
   rails_12factor
