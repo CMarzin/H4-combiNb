@@ -32,6 +32,8 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'pg', '~> 0.21'
+
 group :production do
   gem 'pg', '~> 0.21'
   gem 'rails_12factor'
