@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @annonce.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @annonce.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @annonce.status %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @annonce.creator_id %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @annonce.location %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @annonce.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @annonce.end %>
+</p>
+
+<p>
+  <strong>Combi:</strong>
+  <%= @annonce.combi_id %>
+</p>
+
+<%= link_to 'Edit', edit_annonce_path(@annonce) %> |
+<%= link_to 'Back', annonces_path %>
