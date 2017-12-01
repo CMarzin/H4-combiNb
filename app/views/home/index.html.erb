@@ -4,6 +4,9 @@
   <%= link_to 'Annonces', annonces_path %>
 </p>
 <p>
+  <%= link_to 'Combis', combis_path %>
+</p>
+<p>
   <% if user_signed_in? %>
     <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>  
   <% else %>

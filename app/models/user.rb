@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
   has_many :annonces
+  # has_many :combis
 
   # ======================
   #       DEVISE

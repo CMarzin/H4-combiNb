@@ -47,8 +47,8 @@
     </div>
 
     <div class="field">
-      <%= form.label :combi_id %>
-      <%= form.select :combi_id, id: :annonce_combi_id %>
+      <%= form.label :combi %>
+      <%= collection_select(:annonce, :combi_id, Combi.all, :id, :combi_infos) %>
     </div>
 
     <div class="actions">
