@@ -1,0 +1,57 @@
+<%= form_with(model: annonce, local: true) do |form| %>
+  <% if annonce.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(annonce.errors.count, "error") %> prohibited this annonce from being saved:</h2>
+
+      <ul>
+      <% annonce.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%# Hidden Fields %>
+    <%= form.hidden_field :creator_id, id: :annonce_creator_id %>
+
+
+  <%# Visible Fields %>
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :annonce_title %>
+    </div>
+
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description, id: :annonce_description, size: "100x30" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :status %>
+      <%= form.select :status, ['Available', 'Booked', 'Draft'],id: :annonce_status %>
+    </div>
+
+    <div class="field">
+      <%= form.label :location %>
+      <%= form.text_field :location, id: :annonce_location %>
+    </div>
+
+    <div class="field">
+      <%= form.label :start %>
+      <%= form.datetime_field :start, id: :annonce_start %>
+    </div>
+
+    <div class="field">
+      <%= form.label :end %>
+      <%= form.datetime_field :end, id: :annonce_end %>
+    </div>
+
+    <div class="field">
+      <%= form.label :combi %>
+      <%= collection_select(:annonce, :combi_id, Combi.all, :id, :combi_infos) %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+<% end %>

@@ -1,4 +1,11 @@
 class User < ApplicationRecord
+
+  has_many :annonces
+  # has_many :combis
+
+  # ======================
+  #       DEVISE
+  #=======================
   extend Devise::Models
 
   attr_accessor :login
