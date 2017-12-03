@@ -1,20 +1,26 @@
+branches:
+  only:
+  - staging
+  - master
+
 deploy:
   provider: heroku
   api_key:
-    secure: USPuzgzQCtfoxrEC6NLkpwC/9LnxR8i/iEQjLKEgLMksRp+BIndb6vAiPTq9iDDOe5tZW1sDihQDl5M3ZT3PULkKKL7pvRYIEipVtJfu3eddKePzyt0S+C0Dyipdr8EPap49g2lEBcQo4dVX0wSWvADji3ux3Yr3ZrcYwu3kuaX8bmnF21To5ra5qsRra/L8eAMgj7qrijOddnJYQCi+voP5w2GWvLbK4rsa6Dr23A/8Og6es4oIb+IQBke53T4BS3oM9vIYy/BlLhLIP7Qfe8dQpZnt/0ZqGDtUKnuUtd2l27Yn8rpOLZ6IkfTU+xHuGArEQIRfN+7cKfl02KBTjB6jSamcM1RJNnYX0aUlPieavgOhHbG9t4tUzT6HLH388oO+zCMh9nWKOXFMc4COroXPp7OLGM5PKrb/rkmYbtGt5bt51AaENKnIU3jD20yBbg9YpoYAhYsF4Y0yoChBMDJDYyXcLAZET42kkL0wCxdyTTxuDxsvuC64czeuavhCwsx6eMta9UZTuWQTtVpPkdzzMeFf0gJXzdFTpv8vUB7hKlsmn+1pHq2uTnwzaMTafotTM5L5dlRVAFnnVLcLfNH4YDAwqnG/+cMcFNsqkI+2nGZjXGA1VswAZ73/wBY2wKJsfy5dqZ/rEY6eoF0Y2AywckB+tluUpgAEM7ZREzo=
-  app: hetic-g1-e1-staging
-  on:
-    repo: CMarzin/H4-combiNb
-    branch: staging
-  run:
-  - rake db:migrate
-
-  provider: heroku
-  api_key:
-    secure: USPuzgzQCtfoxrEC6NLkpwC/9LnxR8i/iEQjLKEgLMksRp+BIndb6vAiPTq9iDDOe5tZW1sDihQDl5M3ZT3PULkKKL7pvRYIEipVtJfu3eddKePzyt0S+C0Dyipdr8EPap49g2lEBcQo4dVX0wSWvADji3ux3Yr3ZrcYwu3kuaX8bmnF21To5ra5qsRra/L8eAMgj7qrijOddnJYQCi+voP5w2GWvLbK4rsa6Dr23A/8Og6es4oIb+IQBke53T4BS3oM9vIYy/BlLhLIP7Qfe8dQpZnt/0ZqGDtUKnuUtd2l27Yn8rpOLZ6IkfTU+xHuGArEQIRfN+7cKfl02KBTjB6jSamcM1RJNnYX0aUlPieavgOhHbG9t4tUzT6HLH388oO+zCMh9nWKOXFMc4COroXPp7OLGM5PKrb/rkmYbtGt5bt51AaENKnIU3jD20yBbg9YpoYAhYsF4Y0yoChBMDJDYyXcLAZET42kkL0wCxdyTTxuDxsvuC64czeuavhCwsx6eMta9UZTuWQTtVpPkdzzMeFf0gJXzdFTpv8vUB7hKlsmn+1pHq2uTnwzaMTafotTM5L5dlRVAFnnVLcLfNH4YDAwqnG/+cMcFNsqkI+2nGZjXGA1VswAZ73/wBY2wKJsfy5dqZ/rEY6eoF0Y2AywckB+tluUpgAEM7ZREzo=
+    secure: Ol6ArdSjLhun9msDK6A6y4PkobCevLFBgFoimSvN2VcHPuqd0ovkrnZzofFqormxMxIuhdfvPpWFuoBROwMp2BCGf7jUgMOOzK81LvDfR28NcTEGE0W+XsYTpCXtPwlkXNIN47VlFJvJG7pfFa3Mm4DgPDWReJsn9IWr0XWbDXJU/BKV84bBeCpx8f3RyHaqThhJxTpnuUbjuIIyxFjXLxx+cXpy6NBPtv2UrXURx6CmPLK7sz9waxNmGrzUs/mpHu+Xubcbh+FjgGdF4/EWQd9bSAJL0wgoplAM9nPh6AuzDUL5fVZCMFRFrVlsFt25j0gLgczTR6jvXz1yyqWErwEv7ePDkKb+L/SWUckipm4d8aIApcOvCmeQpCIrRGoYcEEl6KQFJ+0qxfpTkGA5xHJ0jo7vyXFMta8nVWsphca7WvKpULvwlayj+Rno4GLM7fv2EFQwfQ1tIjs2yyWmn+aodPmnKbVap34KV6o3HTZARAxHyLJ+O2/EjR8//hiKD8CfNM98CzRU9O+xq2Wq248aZbOPbdx32aGTH3tzhW9R7M5VJkO2rIUZrR5B6s39pqFkpWLxhcgXS9T6+kucnbYaFfLLasK6+DFPx0eJPftlVPSiSjlJ3Cqibivae1b84BLTxTj6DlmtdMXv+6i4Rva2QXrXs4XQjSD4ycYVseY=
   app: hetic-g1-e1
   on:
     repo: CMarzin/H4-combiNb
     branch: master
+  run:
+  - rake db:migrate
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: VD1b9JB6ZBSK/N29MeO2L4A7LOh79W49l/vwrw7HwCPcINFQtPs8wEqTaxbpMXb4khheSZEPVq0EwcG/9AQM7JTWe4mIGAL0NEIokZuOhej+LnvQ3J/TWN9DF3bSpG8GGqzWptX7AeaoxMKm3kOtx2HpKe3UG3MzraGOwERlKyx+vFZ7E+/JpqboAuYmcgOxjAubjkPNIAxpzZKKQu23A/5FqEO/6k7OtmJC5SYhgyWGNvjmsb8L2OO3ncOz9GN5URXBFe2lqlhcPo6WemyH0OML/qC4FwphHeYjZ9vsF9H303RixajSbX0DyZGdYTzBmJRFaMfQts0IA/az1yBHPCHeejyDnp/vwMJczzAqL0oqwaNQk0opvUCmSHNWCv4L3Hw+ziO11a/4LfRkp0ts2NiuxR/7LtXefCddHypq960QpSHPUL408u/xHnVBzK/CiTxGE45rW0QiiwDHVkCukfyJ169lXfBmgaoFbKoGdrbLwaxODdQxFPHiW7RYQroVGqCEuUnTi5pvZRf3GjclZWmhS1Ph4X6F6G6e2kPz/XF4+eObKbOSewQhkUlvuV49Kn5TpUSnPKjmj2YpVTc9y0KwYJc+62KU76mLSaTbvjR60p66eTO0Gq7pc1SSLjZfrPIeg+viX67KXEe/aN6zlY4r1CcSpZW15UqkaWIjLmg=
+  app: hetic-g1-e1-staging
+  on:
+    repo: CMarzin/H4-combiNb
+    branch: staging
   run:
   - rake db:migrate
