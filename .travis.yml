@@ -2,8 +2,19 @@ deploy:
   provider: heroku
   api_key:
     secure: USPuzgzQCtfoxrEC6NLkpwC/9LnxR8i/iEQjLKEgLMksRp+BIndb6vAiPTq9iDDOe5tZW1sDihQDl5M3ZT3PULkKKL7pvRYIEipVtJfu3eddKePzyt0S+C0Dyipdr8EPap49g2lEBcQo4dVX0wSWvADji3ux3Yr3ZrcYwu3kuaX8bmnF21To5ra5qsRra/L8eAMgj7qrijOddnJYQCi+voP5w2GWvLbK4rsa6Dr23A/8Og6es4oIb+IQBke53T4BS3oM9vIYy/BlLhLIP7Qfe8dQpZnt/0ZqGDtUKnuUtd2l27Yn8rpOLZ6IkfTU+xHuGArEQIRfN+7cKfl02KBTjB6jSamcM1RJNnYX0aUlPieavgOhHbG9t4tUzT6HLH388oO+zCMh9nWKOXFMc4COroXPp7OLGM5PKrb/rkmYbtGt5bt51AaENKnIU3jD20yBbg9YpoYAhYsF4Y0yoChBMDJDYyXcLAZET42kkL0wCxdyTTxuDxsvuC64czeuavhCwsx6eMta9UZTuWQTtVpPkdzzMeFf0gJXzdFTpv8vUB7hKlsmn+1pHq2uTnwzaMTafotTM5L5dlRVAFnnVLcLfNH4YDAwqnG/+cMcFNsqkI+2nGZjXGA1VswAZ73/wBY2wKJsfy5dqZ/rEY6eoF0Y2AywckB+tluUpgAEM7ZREzo=
+  app: hetic-g1-e1-staging
+  on:
+    repo: CMarzin/H4-combiNb
+    branch: staging
+  run:
+  - rake db:migrate
+
+  provider: heroku
+  api_key:
+    secure: USPuzgzQCtfoxrEC6NLkpwC/9LnxR8i/iEQjLKEgLMksRp+BIndb6vAiPTq9iDDOe5tZW1sDihQDl5M3ZT3PULkKKL7pvRYIEipVtJfu3eddKePzyt0S+C0Dyipdr8EPap49g2lEBcQo4dVX0wSWvADji3ux3Yr3ZrcYwu3kuaX8bmnF21To5ra5qsRra/L8eAMgj7qrijOddnJYQCi+voP5w2GWvLbK4rsa6Dr23A/8Og6es4oIb+IQBke53T4BS3oM9vIYy/BlLhLIP7Qfe8dQpZnt/0ZqGDtUKnuUtd2l27Yn8rpOLZ6IkfTU+xHuGArEQIRfN+7cKfl02KBTjB6jSamcM1RJNnYX0aUlPieavgOhHbG9t4tUzT6HLH388oO+zCMh9nWKOXFMc4COroXPp7OLGM5PKrb/rkmYbtGt5bt51AaENKnIU3jD20yBbg9YpoYAhYsF4Y0yoChBMDJDYyXcLAZET42kkL0wCxdyTTxuDxsvuC64czeuavhCwsx6eMta9UZTuWQTtVpPkdzzMeFf0gJXzdFTpv8vUB7hKlsmn+1pHq2uTnwzaMTafotTM5L5dlRVAFnnVLcLfNH4YDAwqnG/+cMcFNsqkI+2nGZjXGA1VswAZ73/wBY2wKJsfy5dqZ/rEY6eoF0Y2AywckB+tluUpgAEM7ZREzo=
   app: hetic-g1-e1
   on:
     repo: CMarzin/H4-combiNb
+    branch: master
   run:
   - rake db:migrate
