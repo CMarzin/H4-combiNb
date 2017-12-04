@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :annonces
   resources :combis
   devise_for :users
   root 'home#index'
