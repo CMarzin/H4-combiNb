@@ -247,8 +247,8 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-  paperclip
   pg (~> 0.21)
+  paperclip
   puma (~> 3.7)
   rails (~> 5.1.4)
   rails_12factor
