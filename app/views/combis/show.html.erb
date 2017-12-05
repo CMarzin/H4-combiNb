@@ -25,5 +25,9 @@
   <%= @combi.fueltype %>
 </p>
 
+<div>
+  <h3>Photos<h3>
+  <%= image_tag @combi.avatar.url %>
+</div>
 <%= link_to 'Edit', edit_combi_path(@combi) %> |
 <%= link_to 'Back', combis_path %>
