@@ -36,6 +36,12 @@
     <%= form.text_field :fueltype, id: :combi_fueltype %>
   </div>
 
+  <div class="form-group">    
+    <%= form.label :avatar %>
+    <%= form.file_field :avatar %>
+    <%= image_tag @combi.avatar.url %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

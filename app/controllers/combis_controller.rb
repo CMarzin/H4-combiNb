@@ -69,6 +69,6 @@ class CombisController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def combi_params
-      params.require(:combi).permit(:marque, :year, :owner, :kilometers, :fueltype)
+      params.require(:combi).permit(:marque, :year, :owner, :kilometers, :fueltype, :avatar)
     end
 end
