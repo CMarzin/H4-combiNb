@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :activites
   resources :annonces
   resources :combis
   devise_for :users
