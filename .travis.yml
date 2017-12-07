@@ -9,6 +9,6 @@ deploy:
     secure: Ol6ArdSjLhun9msDK6A6y4PkobCevLFBgFoimSvN2VcHPuqd0ovkrnZzofFqormxMxIuhdfvPpWFuoBROwMp2BCGf7jUgMOOzK81LvDfR28NcTEGE0W+XsYTpCXtPwlkXNIN47VlFJvJG7pfFa3Mm4DgPDWReJsn9IWr0XWbDXJU/BKV84bBeCpx8f3RyHaqThhJxTpnuUbjuIIyxFjXLxx+cXpy6NBPtv2UrXURx6CmPLK7sz9waxNmGrzUs/mpHu+Xubcbh+FjgGdF4/EWQd9bSAJL0wgoplAM9nPh6AuzDUL5fVZCMFRFrVlsFt25j0gLgczTR6jvXz1yyqWErwEv7ePDkKb+L/SWUckipm4d8aIApcOvCmeQpCIrRGoYcEEl6KQFJ+0qxfpTkGA5xHJ0jo7vyXFMta8nVWsphca7WvKpULvwlayj+Rno4GLM7fv2EFQwfQ1tIjs2yyWmn+aodPmnKbVap34KV6o3HTZARAxHyLJ+O2/EjR8//hiKD8CfNM98CzRU9O+xq2Wq248aZbOPbdx32aGTH3tzhW9R7M5VJkO2rIUZrR5B6s39pqFkpWLxhcgXS9T6+kucnbYaFfLLasK6+DFPx0eJPftlVPSiSjlJ3Cqibivae1b84BLTxTj6DlmtdMXv+6i4Rva2QXrXs4XQjSD4ycYVseY=
   app:
     master: hetic-g1-e1
-    staging: hetic-g1-e1
+    staging: hetic-g1-e1-staging
   run:
   - rake db:migrate
