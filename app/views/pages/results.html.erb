@@ -1,0 +1,4 @@
+<p>coucou</p>
+<% Activite.where(location: "Paris").each do |act| %>
+<%= act.titre  %>
+<% end %>
