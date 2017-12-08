@@ -45,6 +45,10 @@ travis open
 ```sh
 rails server
 ```
+* Launch watch js
+```sh
+npm run dev
+```
 
 ## Deployment instructions
 ___

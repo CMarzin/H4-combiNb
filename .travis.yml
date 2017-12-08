@@ -12,3 +12,5 @@ deploy:
     production: hetic-g1-e1
   run:
   - rake db:migrate
+  - npm install
+  - npm run build
