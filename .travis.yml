@@ -12,5 +12,3 @@ deploy:
     staging: hetic-g1-e1-staging
   run:
   - rake db:migrate
-  - npm install
-  - npm run build
