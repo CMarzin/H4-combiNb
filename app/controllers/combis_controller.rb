@@ -5,6 +5,7 @@ class CombisController < ApplicationController
   # GET /combis.json
   def index
     @combis = Combi.all
+    authorize @combis
   end
 
   # GET /combis/1
@@ -15,16 +16,21 @@ class CombisController < ApplicationController
   # GET /combis/new
   def new
     @combi = Combi.new
+    authorize @combi
+    @combi[:owner] = current_user[:username]
   end
 
   # GET /combis/1/edit
   def edit
+    authorize @combi
   end
 
   # POST /combis
   # POST /combis.json
   def create
     @combi = Combi.new(combi_params)
+    # link the current user to the combi it create
+    @combi[:user_id] = current_user[:id]
 
     respond_to do |format|
       if @combi.save
