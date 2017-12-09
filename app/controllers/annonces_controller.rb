@@ -21,13 +21,15 @@ class AnnoncesController < ApplicationController
 
   # GET /annonces/1/edit
   def edit
+    authorize @annonce
   end
 
   # POST /annonces
   # POST /annonces.json
   def create
     @annonce = Annonce.new(annonce_params)
-    authorize @annonce
+    # link the current user to the combi it create
+    @annonce[:creator_id] = current_user[:id]
 
     respond_to do |format|
       if @annonce.save
@@ -68,7 +70,6 @@ class AnnoncesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_annonce
       @annonce = Annonce.find(params[:id])
-      authorize @annonce
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
