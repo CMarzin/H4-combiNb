@@ -132,6 +132,8 @@ GEM
       mimemagic (~> 0.3.0)
     pg (0.21.0)
     puma (3.11.0)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
@@ -247,9 +249,10 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-  pg (~> 0.21)
   paperclip
+  pg (~> 0.21)
   puma (~> 3.7)
+  pundit
   rails (~> 5.1.4)
   rails_12factor
   sass-rails (~> 5.0)

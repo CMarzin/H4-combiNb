@@ -10,8 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20171207141533) do
 
-ActiveRecord::Schema.define(version: 20171205130108) do
+  create_table "activites", force: :cascade do |t|
+    t.string "titre"
+    t.text "description"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "annonces", force: :cascade do |t|
     t.string "title"
@@ -38,6 +45,8 @@ ActiveRecord::Schema.define(version: 20171205130108) do
     t.string "avatar_content_type"
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_combis_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
