@@ -1611,3 +1611,157 @@ Processing by PagesController#results as HTML
 Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-10 11:49:31 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (2.0ms)
+Completed 200 OK in 30ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/request" for 127.0.0.1 at 2017-12-10 11:49:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/request"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-10 11:49:51 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (0.4ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/results" for 127.0.0.1 at 2017-12-10 11:49:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/results"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-10 11:50:14 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (1.2ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/results" for 127.0.0.1 at 2017-12-10 11:50:16 +0100
+Processing by PagesController#results as HTML
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.4ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (16.8ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-10 11:50:55 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 11:50:57 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (1.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 12:03:41 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  Rendered pages/results.html.erb (3.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (can't cast ActionController::Parameters):
+    1: <p>coucou</p>
+    2: <% Activite.where(location: params).each do |act| %>
+    3: <%= act.titre  %>
+    4: <% end %>
+  
+app/views/pages/results.html.erb:2:in `_app_views_pages_results_html_erb__1670362197843463591_70272311364380'
+app/controllers/pages_controller.rb:6:in `results'
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:03:50 +0100
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:03:51 +0100
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:03:58 +0100
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:03:58 +0100
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:04:03 +0100
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:04:05 +0100
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:04:07 +0100
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:04:22 +0100
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:04:24 +0100
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:04:24 +0100
+Started PUT "/__web_console/repl_sessions/49fa84daeb678360e640edcb7a8e58d9" for 127.0.0.1 at 2017-12-10 12:04:32 +0100
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 12:04:41 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (1.7ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Hetic" for 127.0.0.1 at 2017-12-10 12:04:47 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Hetic"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Hetic"]]
+  Rendered pages/results.html.erb (1.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
