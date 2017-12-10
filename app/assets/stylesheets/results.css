@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #F9F9F9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  align-self: center;
+}
+
+.text__red {
+  color: #F52A12;
+}
+
+form {
+  align-self: center;
+}
+input {
+  width: 80vw;
+  height: 7vw;
+  min-height: 40px;
+  max-height: 60px;
+  border-radius: 1vw;
+  box-shadow: 0 0 4px #DDD;
+  border: none;
+  font-size: 1em;
+}

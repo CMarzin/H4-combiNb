@@ -1765,3 +1765,716 @@ Processing by PagesController#results as HTML
 Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-10 23:40:36 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (2.2ms)
+Completed 200 OK in 38ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-10 23:46:31 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (0.3ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:46:34 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  Rendered pages/results.html.erb (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/views/pages/results.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting ')'
+ppend=( params.values[0] value="">);@output_buffer.safe_appe
+                              ^
+/Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/views/pages/results.html.erb:3: syntax error, unexpected ')'
+=( params.values[0] value="">);@output_buffer.safe_append=' 
+                              ^
+/Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/views/pages/results.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/views/pages/results.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/pages/results.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pages/results.html.erb:3: syntax error, unexpected ')'
+app/views/pages/results.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/pages/results.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/pages_controller.rb:6:in `results'
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:46:43 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  Rendered pages/results.html.erb (340.3ms)
+Completed 500 Internal Server Error in 343ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( results.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "results" %>
+    2: <form action="/pages/results" method="GET">
+    3:   <input type="text" value=<%= params.values[0] %> name="ville">
+    4: </form>
+  
+app/views/pages/results.html.erb:1:in `_app_views_pages_results_html_erb___948190574422068443_70268889624680'
+app/controllers/pages_controller.rb:6:in `results'
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:47:32 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  Rendered pages/results.html.erb (8.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( results.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "results" %>
+    2: <form action="/pages/results" method="GET">
+    3:   <input type="text" value=<%= params.values[0] %> name="ville">
+    4: </form>
+  
+app/views/pages/results.html.erb:1:in `_app_views_pages_results_html_erb___948190574422068443_70268922916060'
+app/controllers/pages_controller.rb:6:in `results'
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:48:51 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  Rendered pages/results.html.erb (230.7ms)
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( results.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "results" %>
+    2: <form action="/pages/results" method="GET">
+    3:   <input type="text" value=<%= params.values[0] %> name="ville">
+    4: </form>
+  
+app/views/pages/results.html.erb:1:in `_app_views_pages_results_html_erb___2821330699947166863_70265968477500'
+app/controllers/pages_controller.rb:6:in `results'
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:49:04 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  Rendered pages/results.html.erb (11.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( results.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "results" %>
+    2: <form action="/pages/results" method="GET">
+    3:   <input type="text" value=<%= params.values[0] %> name="ville">
+    4: </form>
+  
+app/views/pages/results.html.erb:1:in `_app_views_pages_results_html_erb___2821330699947166863_70265969804400'
+app/controllers/pages_controller.rb:6:in `results'
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:49:05 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  Rendered pages/results.html.erb (44.5ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( results.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "results" %>
+    2: <form action="/pages/results" method="GET">
+    3:   <input type="text" value=<%= params.values[0] %> name="ville">
+    4: </form>
+  
+app/views/pages/results.html.erb:1:in `_app_views_pages_results_html_erb___2821330699947166863_70265994239700'
+app/controllers/pages_controller.rb:6:in `results'
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:49:26 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  Rendered pages/results.html.erb (9.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( results.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "results" %>
+    2: <form action="/pages/results" method="GET">
+    3:   <input type="text" value=<%= params.values[0] %> name="ville">
+    4: </form>
+  
+app/views/pages/results.html.erb:1:in `_app_views_pages_results_html_erb___2821330699947166863_70266006035460'
+app/controllers/pages_controller.rb:6:in `results'
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:49:49 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.8ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (214.4ms)
+Completed 200 OK in 232ms (Views: 217.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pages/results?ville=Hetic" for 127.0.0.1 at 2017-12-10 23:49:58 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Hetic"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Hetic"]]
+  Rendered pages/results.html.erb (5.8ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:50:01 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (3.9ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:51:08 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.3ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (9.6ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:51:21 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (9.6ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:51:22 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (3.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:51:39 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (9.3ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:51:47 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (7.3ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:51:48 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (3.3ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:51:49 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (3.5ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:53:32 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.4ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (10.7ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:53:46 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (13.1ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:54:08 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (9.0ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:54:27 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (9.3ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:54:41 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.4ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (10.6ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:54:50 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.5ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (13.1ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:55:00 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (7.1ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:55:09 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.4ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (10.8ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:55:21 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (11.2ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:55:27 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (9.5ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:55:29 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.3ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (3.7ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:55:34 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (23.3ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:55:59 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.3ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (7.7ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:56:04 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (7.8ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:56:20 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.3ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (11.7ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:57:15 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.4ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (11.9ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:57:24 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (11.7ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:57:31 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.5ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (12.7ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:57:58 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (9.7ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:58:16 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (7.7ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:58:40 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (10.2ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:59:51 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  Rendered pages/results.html.erb (266.2ms)
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `parms' for #<#<Class:0x00007f95a37e9d80>:0x00007f95a98986b8>
+Did you mean?  params):
+    2: <form action="/pages/results" method="GET">
+    3:   <input type="text" value=<%= params.values[0] %> name="ville">
+    4: </form>
+    5: <h1>Explorer <span><%= parms.values[0] %></span></h1>
+    6: <% Activite.where(location: params.values[0]).each do |act| %>
+    7: <%= act.titre  %>
+    8: <% end %>
+  
+app/views/pages/results.html.erb:5:in `_app_views_pages_results_html_erb__3311372489596690033_70140377176500'
+app/controllers/pages_controller.rb:6:in `results'
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-10 23:59:59 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (7.1ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:00:09 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (15.8ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:01:31 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.4ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (16.5ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:01:39 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.3ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (18.9ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:01:50 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.5ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (11.8ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:02:36 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.4ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (10.0ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:02:57 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (9.9ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:04:48 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.4ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (28.4ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:04:56 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (8.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Hetic" for 127.0.0.1 at 2017-12-11 00:05:04 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Hetic"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Hetic"]]
+  Rendered pages/results.html.erb (4.5ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:05:12 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (3.6ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Hetic" for 127.0.0.1 at 2017-12-11 00:05:15 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Hetic"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Hetic"]]
+  Rendered pages/results.html.erb (5.3ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:05:17 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.1ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (3.2ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:05:57 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (5.4ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:06:10 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (3.9ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:06:37 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.3ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (5.4ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:06:46 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (7.4ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:08:16 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (4.3ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:08:30 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (3.6ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Hetic" for 127.0.0.1 at 2017-12-11 00:08:34 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Hetic"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.1ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Hetic"]]
+  Rendered pages/results.html.erb (3.6ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:08:38 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (6.0ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Hetic" for 127.0.0.1 at 2017-12-11 00:08:42 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Hetic"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.1ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Hetic"]]
+  Rendered pages/results.html.erb (3.2ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:08:45 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (6.8ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:09:14 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.3ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (21.5ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:09:43 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (9.7ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:09:58 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (28.5ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Parishttp://localhost:3000/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:10:37 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Parishttp://localhost:3000/pages/results?ville=Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.7ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Parishttp://localhost:3000/pages/results?ville=Paris"]]
+  Rendered pages/results.html.erb (11.4ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:10:43 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (6.5ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 00:11:04 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.5ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (10.9ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.5ms)
+
+
