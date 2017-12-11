@@ -40,5 +40,7 @@
   <%= @annonce.combi_id %>
 </p>
 
-<%= link_to 'Edit', edit_annonce_path(@annonce) %> |
+<% if policy(@annonce).edit? %>
+  <%= link_to 'Edit', edit_annonce_path(@annonce) %> |
+<% end %>
 <%= link_to 'Back', annonces_path %>

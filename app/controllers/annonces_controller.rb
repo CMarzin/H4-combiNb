@@ -21,8 +21,8 @@ class AnnoncesController < ApplicationController
 
   # GET /annonces/1/edit
   def edit
-    authorize @annonce
-  end
+    authorize @annonce    
+  end  
 
   # POST /annonces
   # POST /annonces.json
