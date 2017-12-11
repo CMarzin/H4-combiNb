@@ -1,7 +1,8 @@
 <%= stylesheet_link_tag "results" %>
 <div class="container">
 <form action="/pages/results" method="GET">
-  <input type="text" value=<%= params.values[0] %> name="ville">
+  
+  <input class="search__input" type="text" value=<%= params.values[0] %> name="ville"></input>
 </form>
 
 <h1>Explorer <span class="text__red"><%= params.values[0] %></span></h1>
