@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "avenir-next";
+  src: url("/assets/avenir-next.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "avenir-next-bold";
+  src: url("/assets/avenir-next-bold.otf") format("truetype");
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -25,6 +35,13 @@ input {
   max-height: 60px;
   border-radius: 1vw;
   box-shadow: 0 0 4px #DDD;
+ 
   border: none;
   font-size: 1em;
+  font-family: 'avenir-next';
+
+}
+
+h1 {
+  font-family: "avenir-next-bold";
 }
