@@ -28,9 +28,11 @@
         <td><%= annonce.start %></td>
         <td><%= annonce.end %></td>
         <td><%= annonce.combi_id %></td>
-        <td><%= link_to 'Show', annonce %></td>
-        <td><%= link_to 'Edit', edit_annonce_path(annonce) %></td>
-        <td><%= link_to 'Destroy', annonce, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', annonce %></td>        
+        <% if policy(annonce).show_button? %>
+          <td><%= link_to 'Edit', edit_annonce_path(annonce) %></td>
+          <td><%= link_to 'Destroy', annonce, method: :delete, data: { confirm: 'Are you sure?' } %></td>          
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +40,6 @@
 
 <br>
 
-<%= link_to 'New Annonce', new_annonce_path %>
+<% if policy(@annonces).show? %>
+  <%= link_to 'New Annonce', new_annonce_path %>
+<% end %>

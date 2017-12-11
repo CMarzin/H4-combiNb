@@ -1,5 +1,6 @@
 {
   "name": "combnb",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {}
 }

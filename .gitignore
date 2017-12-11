@@ -37,3 +37,5 @@ capybara-*.html
 /coverage/
 /spec/tmp
 
+app/assets/build/*
+

@@ -10,3 +10,4 @@ class Combi < ApplicationRecord
         "#{self.marque} #{self.year}"
     end
 end
+  
