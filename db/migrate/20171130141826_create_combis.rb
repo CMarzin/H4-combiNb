@@ -6,7 +6,6 @@ class CreateCombis < ActiveRecord::Migration[5.1]
       t.string :owner
       t.integer :kilometers
       t.string :fueltype
-      t.integer :user_id
 
       t.timestamps
     end
