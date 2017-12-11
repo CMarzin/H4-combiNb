@@ -1,9 +1,14 @@
 <header>
+    <% if user_signed_in? %>
+        <h3>This is <%= current_user.username %></h3>
+        <h3>This is <%= current_user.id %></h3>
+    <% end %>
     <nav>
         <ul>
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to 'Annonces', annonces_path %></li>
             <li><%= link_to 'Combis', combis_path %></li>
+            <li><%= link_to 'Activités', activites_path%></li>
             <li>
                 <% if user_signed_in? %>
                     <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>  

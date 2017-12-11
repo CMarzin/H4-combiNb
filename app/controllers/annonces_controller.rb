@@ -5,6 +5,7 @@ class AnnoncesController < ApplicationController
   # GET /annonces.json
   def index
     @annonces = Annonce.all
+    authorize @annonces
   end
 
   # GET /annonces/1
@@ -15,16 +16,20 @@ class AnnoncesController < ApplicationController
   # GET /annonces/new
   def new
     @annonce = Annonce.new
+    authorize @annonce
   end
 
   # GET /annonces/1/edit
   def edit
-  end
+    authorize @annonce    
+  end  
 
   # POST /annonces
   # POST /annonces.json
   def create
     @annonce = Annonce.new(annonce_params)
+    # link the current user to the combi it create
+    @annonce[:creator_id] = current_user[:id]
 
     respond_to do |format|
       if @annonce.save
