@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "index" %>
+<%= stylesheet_link_tag "index.css" %>
 <div class="container">
 
 <form action="/pages/results" method="GET">  
@@ -12,7 +12,7 @@
 <h1>Toutes les <span class="text__red">Activités</span></h1>
 
 <% Activite.where(location: params.values[0]).each do |act| %>
-<%= act.titre  %>
+<%= act.titre %>
 <% end %>
 
 </div>
