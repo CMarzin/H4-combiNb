@@ -3205,3 +3205,54 @@ Processing by PagesController#results as HTML
 Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-11 10:22:48 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (0.4ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-11 10:23:00 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-11 10:24:07 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-11 10:24:19 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (0.3ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-11 10:26:45 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (2.8ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/index" for 127.0.0.1 at 2017-12-11 10:27:18 +0100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (10.5ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/results?ville=Paris" for 127.0.0.1 at 2017-12-11 10:27:23 +0100
+Processing by PagesController#results as HTML
+  Parameters: {"ville"=>"Paris"}
+  Rendering pages/results.html.erb
+  [1m[36mActivite Load (0.2ms)[0m  [1m[34mSELECT "activites".* FROM "activites" WHERE "activites"."location" = ?[0m  [["location", "Paris"]]
+  Rendered pages/results.html.erb (6.5ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
