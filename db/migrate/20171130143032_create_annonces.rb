@@ -8,7 +8,7 @@ class CreateAnnonces < ActiveRecord::Migration[5.1]
       t.string :location
       t.string :start
       t.string :end
-      t.string :combi_id
+      t.integer :combi_id
 
       t.timestamps
     end
