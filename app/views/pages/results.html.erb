@@ -1,0 +1,18 @@
+<%= stylesheet_link_tag "index" %>
+<div class="container">
+
+<form action="/pages/results" method="GET">  
+  <input class="search__input" type="text" value=<%= params.values[0] %> name="ville"></input>
+</form>
+
+<h1>Explorer <span class="text__red"><%= params.values[0] %></span></h1>
+
+<h1><span class="text__red">Activités</span> populaires</h1>
+
+<h1>Toutes les <span class="text__red">Activités</span></h1>
+
+<% Activite.where(location: params.values[0]).each do |act| %>
+<%= act.titre  %>
+<% end %>
+
+</div>

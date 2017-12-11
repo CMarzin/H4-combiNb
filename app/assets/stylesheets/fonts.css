@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "avenir-next";
+  src: url("/assets/avenir-next.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "avenir-next-bold";
+  src: url("/assets/avenir-next-bold.otf") format("truetype");
+}
