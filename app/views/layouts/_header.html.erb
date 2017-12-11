@@ -9,6 +9,7 @@
             <li><%= link_to 'Annonces', annonces_path %></li>
             <li><%= link_to 'Combis', combis_path %></li>
             <li><%= link_to 'Activités', activites_path%></li>
+            <li><%= link_to 'L\'inté de Tom', inte_path %></li>
             <li>
                 <% if user_signed_in? %>
                     <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>  
