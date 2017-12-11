@@ -32,7 +32,7 @@
         <% if policy(combi).edit? %>
           <td><%= link_to 'Edit', edit_combi_path(combi) %></td>
           <td><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <% end %>        
       </tr>
     <% end %>
   </tbody>
@@ -40,6 +40,6 @@
 
 <br>
 
-<% if policy(:combi).show? %>
+<% if policy(@combis).show? %>
   <%= link_to 'New Combi', new_combi_path %>
 <% end %>

@@ -30,7 +30,7 @@
   <%= image_tag @combi.avatar.url %>
 </div>
 
-<% if policy(:combi).show? %>
+<% if policy(@combi).edit? %>
   <%= link_to 'Edit', edit_combi_path(@combi) %> |
 <% end %>
 <%= link_to 'Back', combis_path %>
