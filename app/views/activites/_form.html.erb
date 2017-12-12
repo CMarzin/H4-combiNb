@@ -26,6 +26,11 @@
     <%= form.text_field :location, id: :activite_location %>
   </div>
 
+  <div class="form-group">
+    <%= form.file_field :image %>
+    <%= image_tag @activite.image.url %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
