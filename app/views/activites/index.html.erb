@@ -19,13 +19,16 @@
         <td><%= activite.description %></td>
         <td><%= activite.location %></td>
         <td><%= link_to 'Show', activite %></td>
-        <td><%= link_to 'Edit', edit_activite_path(activite) %></td>
+      <% if policy(activite).show_button? %>
+       <td><%= link_to 'Edit', edit_activite_path(activite) %></td>
         <td><%= link_to 'Destroy', activite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Activite', new_activite_path %>
+<% if policy(@activites).show? %>
+  <%= link_to 'New Activite', new_activite_path %>
+<% end %>
