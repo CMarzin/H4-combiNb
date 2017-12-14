@@ -15,7 +15,7 @@
 
     <% Activite.where(location: params.values[0]).each do |act| %>
 
-    <a class="activite">
+    <a class="activite" href="<%= activite_path(act)%>">
 
       <img class="activite__img" src="<%= act.image.url %>" >
       <p class='text'><%= act.titre %></p>

@@ -66,6 +66,8 @@ h1 {
 
 .activite {
   margin: 0 5px;
+
+  text-decoration: none;
 }
 
 .activite__img {

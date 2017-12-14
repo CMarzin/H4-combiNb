@@ -10,6 +10,7 @@ class ActivitesController < ApplicationController
   # GET /activites/1
   # GET /activites/1.json
   def show
+    render layout: false
   end
 
   # GET /activites/new
@@ -69,6 +70,6 @@ class ActivitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activite_params
-      params.require(:activite).permit(:titre, :description, :location)
+      params.require(:activite).permit(:titre, :description, :location, :image)
     end
 end
