@@ -22,6 +22,10 @@
   </div>
 
   <div class="field">
+    <%= form.hidden_field :owner, id: :combi_owner %>
+  </div>
+
+  <div class="field">
     <%= form.label :kilometers %>
     <%= form.number_field :kilometers, id: :combi_kilometers %>
   </div>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  startTime: MyString
+  endTime: MyString
+  annonce_id: MyString
+  client_id: MyString
+
+two:
+  startTime: MyString
+  endTime: MyString
+  annonce_id: MyString
+  client_id: MyString

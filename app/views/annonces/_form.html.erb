@@ -14,7 +14,6 @@
   <%# Hidden Fields %>
     <%= form.hidden_field :creator_id, id: :annonce_creator_id %>
 
-
   <%# Visible Fields %>
     <div class="field">
       <%= form.label :title %>
@@ -24,11 +23,6 @@
     <div class="field">
       <%= form.label :description %>
       <%= form.text_area :description, id: :annonce_description, size: "100x30" %>
-    </div>
-
-    <div class="field">
-      <%= form.label :status %>
-      <%= form.select :status, ['Available', 'Booked', 'Draft'],id: :annonce_status %>
     </div>
 
     <div class="field">
