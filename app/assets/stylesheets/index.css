@@ -51,3 +51,28 @@ h1 {
 .text__red {
   color: #F52A12;
 }
+
+.text {
+  font-family: "avenir-next";
+  color: #3A3A3A;
+  font-size: 15px;
+}
+
+/* ACTIVITIES */
+
+.activites {
+  display: flex;
+}
+
+.activite {
+  margin: 0 5px;
+
+  text-decoration: none;
+}
+
+.activite__img {
+  width: 150px;
+  height: 100px;
+
+  border-radius: 3px;
+}
