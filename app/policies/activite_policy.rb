@@ -1,4 +1,4 @@
-class CombiPolicy < ApplicationPolicy
+class ActivitePolicy < ApplicationPolicy
   def index?
     true
   end
@@ -9,21 +9,27 @@ class CombiPolicy < ApplicationPolicy
 
   def new?
     return true if user.present?
-    # raise Pundit::NotAuthorizedError, "must be logged in" unless user.present?
   end
 
   def edit?
     if user.present?
-      @matchID = combi[:user_id].to_i == user.id.to_i
+      @matchID = activite[:user_id].to_i == user.id.to_i
       return true if @matchID
     else
       return false
     end
   end
+
+  def show_button?
+    if user.present?
+      @matchID = activite[:user_id].to_i == user.id.to_i
+      return true if @matchID
+    end
+  end
  
   private
  
-    def combi
+    def activite
       record
     end
 end
