@@ -47,6 +47,8 @@ input {
 
 .explore__item {
   margin-right: 2vw;
+
+  text-decoration: none;
 }
 
 .explore__text {
