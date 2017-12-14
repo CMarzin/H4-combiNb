@@ -34,6 +34,10 @@ class CombisController < ApplicationController
     # link the current user to the combi it create
     @combi[:user_id] = current_user[:id]
 
+    puts "==="
+    puts @combi
+    puts "==="
+
     respond_to do |format|
       if @combi.save
         format.html { redirect_to @combi, notice: 'Combi was successfully created.' }
