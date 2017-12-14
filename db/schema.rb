@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171213093323) do
+ActiveRecord::Schema.define(version: 20171214084326) do
 
   create_table "activites", force: :cascade do |t|
     t.string "titre"
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(version: 20171213093323) do
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.integer "user_id"
+    t.integer "stars_number"
     t.index ["user_id"], name: "index_combis_on_user_id"
-    t.integer "stars_number"    
   end
 
   create_table "users", force: :cascade do |t|
