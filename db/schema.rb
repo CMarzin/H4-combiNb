@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171212082633) do
+ActiveRecord::Schema.define(version: 20171213093323) do
 
   create_table "activites", force: :cascade do |t|
     t.string "titre"
@@ -18,12 +18,12 @@ ActiveRecord::Schema.define(version: 20171212082633) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "category"
-    t.string "categorie"
+    t.integer "user_id"
     t.string "image_file_name"
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.integer "stars_number"
   end
 
   create_table "annonces", force: :cascade do |t|
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20171212082633) do
     t.string "combi_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "stars_number"
   end
 
   create_table "combis", force: :cascade do |t|
@@ -52,6 +53,8 @@ ActiveRecord::Schema.define(version: 20171212082633) do
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.integer "user_id"
+    t.integer "stars_number"
+    t.index ["user_id"], name: "index_combis_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,6 +79,7 @@ ActiveRecord::Schema.define(version: 20171212082633) do
     t.string "avatar_content_type"
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer "stars_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
