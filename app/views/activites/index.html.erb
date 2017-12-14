@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Activites</h1>
+Search <%= text_field_tag 'search', '', data: {'js-search' => true} %>
 
 <table>
   <thead>
@@ -8,9 +9,11 @@
       <th>Titre</th>
       <th>Description</th>
       <th>Location</th>
+      <th>Note</th>
       <th colspan="3"></th>
     </tr>
   </thead>
+
 
   <tbody>
     <% @activites.each do |activite| %>
@@ -18,6 +21,17 @@
         <td><%= activite.titre %></td>
         <td><%= activite.description %></td>
         <td><%= activite.location %></td>
+        <td><%= activite.stars_number %></td>
+        <td>
+        <fieldset class="rating">
+          <legend>Please rate:</legend>
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+        </fieldset>
+        </td>
         <td><%= link_to 'Show', activite %></td>
       <% if policy(activite).show_button? %>
        <td><%= link_to 'Edit', edit_activite_path(activite) %></td>
