@@ -27,7 +27,7 @@
         <td><%= combi.owner %></td>
         <td><%= combi.kilometers %></td>
         <td><%= combi.fueltype %></td>
-        <td><%= image_tag(combi.avatar) %></td>
+        <td><%= image_tag combi.avatar.url(:medium) %></td>
         <td><%= link_to 'Show', combi %></td>
         <% if policy(combi).edit? %>
           <td><%= link_to 'Edit', edit_combi_path(combi) %></td>
