@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'pages/index', to: 'pages#index', as: "inte"
   get 'pages/results'
+  get 'pages/combiList'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
