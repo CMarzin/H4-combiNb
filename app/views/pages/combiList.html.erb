@@ -8,7 +8,7 @@
 <div class="container">
 
   <form action="/pages/combiList" method="GET">
-    <input type="text" placeholder="Choissez votre ville">
+    <input type="text" placeholder="Cet input ne sert à rien">
   </form>
 
   <h1>Proche de <span class="text__red">vous</span></h1>
@@ -17,12 +17,12 @@
   
     <% Combi.all.each do |combi| %>
 
-      <div class="combi">
+      <a class="combi" href="<%= combi_path(combi) %>">
       
       <img class="combi__img" src="<%= combi.avatar.url %>">
       <h2> <%= combi.marque %> </h2>
       
-      </div>
+      </a>
 
     <% end %>
 
