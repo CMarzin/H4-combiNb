@@ -1,0 +1,72 @@
+@import 'fonts.css';
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #F9F9F9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  align-self: center;
+}
+
+form {
+  align-self: center;
+}
+
+/* SEARCH INPUT */
+
+input {
+  width: 80vw;
+  height: 50px;
+  margin-top: 15px;
+  padding-left: 40px;
+  padding-top: 5px;
+
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 4px #DDD;
+  
+  font-size: 1em;
+  font-family: 'avenir-next';
+  color: #4A4A4A;
+
+  /* manages the icon */
+  background-image: url("/assets/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 16px;
+}
+
+/* TEXT STUFF */ 
+
+h1 {
+  font-family: 'avenir-next-bold';
+}
+
+h2 {
+  font-family: 'avenir-next';
+}
+
+.text__red {
+  color: #F52A12;
+}
+
+/* COMBI STUFF */
+
+.container {
+  display: flex;
+}
+
+.combis {
+  max-width: 400px;
+}
+
+.combi__img {
+  width: 100%;
+
+  border-radius: 3px;
+
+}
