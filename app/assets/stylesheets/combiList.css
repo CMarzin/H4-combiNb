@@ -65,7 +65,28 @@ h2 {
 }
 
 .combis {
-  max-width: 400px;
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.combi {
+  width: 100%;
+}
+
+
+@media (min-width:692px) {
+  .combi {
+    width: 47%;
+
+  }
+}
+
+@media (min-width:1000px) {
+  .combi {
+    width: 30%;
+  }
 }
 
 .combi__img {

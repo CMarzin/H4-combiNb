@@ -17,12 +17,12 @@
   
     <% Combi.all.each do |combi| %>
 
-      <div class="combi">
+      <a class="combi" href="<%= combi_path(combi) %>">
       
       <img class="combi__img" src="<%= combi.avatar.url %>">
       <h2> <%= combi.marque %> </h2>
       
-      </div>
+      </a>
 
     <% end %>
 
