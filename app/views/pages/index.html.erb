@@ -1,12 +1,27 @@
+<%# A virer  %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
 <%= stylesheet_link_tag "index.css" %>
 <div class="container">
 
-<form action="/pages/results" method="GET">
-  <input type="text" placeholder="Choisissez votre ville" name="ville">
-</form>
+  <form action="/pages/results" method="GET">
+    <input type="text" placeholder="Choisissez votre ville" name="ville">
+  </form>
 
-<h1>Explorer <span class="text__red">Combinb</span></h1>
+  <h1>Explorer <span class="text__red">Combinb</span></h1>
 
-<h1>Aux alentours de <span class="text__red">Paris</span></h1>
+  <div class="explore">
+    <a class="explore__item" href="/pages/combiList" >
+      <div class="explore__image explore__combi__image"></div>
+      <p class="explore__text">Combis</p>
+    </a>
+    <a class="explore__item" href="<%= activites_path %>">
+      <div class="explore__image explore__activite__image"></div>
+      <p class="explore__text">Activités</p>
+    </a>
+  </div>
+
+  <h1>Aux alentours de <span class="text__red">Paris</span></h1>
 
 </div>

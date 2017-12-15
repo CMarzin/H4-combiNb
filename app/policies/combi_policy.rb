@@ -4,7 +4,7 @@ class CombiPolicy < ApplicationPolicy
   end
 
   def show?
-    return true if user.present?
+    true
   end
 
   def new?

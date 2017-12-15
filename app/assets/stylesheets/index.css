@@ -41,6 +41,37 @@ input {
 }
 
 
+.explore {
+  display: flex;
+}
+
+.explore__item {
+  margin-right: 2vw;
+
+  text-decoration: none;
+}
+
+.explore__text {
+  font-family: 'avenir-next';
+  color: #4A4A4A;
+  font-size: 0.8em;
+}
+
+.explore__image {
+  height: 100px;
+  width: 100px;
+
+  background-size: cover;
+}
+
+.explore__combi__image {
+  background-image: url('/assets/combi_default.jpg');
+}
+
+.explore__activite__image {
+  background-image: url('/assets/birdies.jpg');
+}
+
 /* TEXT-RELATED STUFF */
 h1 {
   font-family: "avenir-next-bold";
