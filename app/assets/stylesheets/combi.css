@@ -1,0 +1,64 @@
+@import 'fonts.css';
+
+body {
+  margin: 0;
+}
+
+.combi__header {
+  height: 60vh;
+
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.combi__button {
+  margin-top: 20px;
+  margin-left: 4vw;
+  padding: 0;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.combi__title {
+  font-family: 'avenir-next-bold';
+  font-size: 1.7em;
+  color: white;
+  text-shadow: 0 2px 4px #333;
+
+  margin-bottom: 10px;
+  margin-left: 4vw;
+}
+
+.combi__content {
+  margin: 4vw; 
+}
+
+.combi__content__title {
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+
+  color: #4A4A4A;
+}
+
+.combi__content__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  font-family: 'avenir-next'
+}
+
+.combi__content__list__entry {
+  width: 42vw;
+}
+
+

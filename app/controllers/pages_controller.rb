@@ -1,6 +1,7 @@
 class PagesController < ApplicationController 
   def index
     render layout: false
+    @activites = Activite.all
   end
 
   def results

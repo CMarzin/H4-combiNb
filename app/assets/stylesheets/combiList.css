@@ -80,6 +80,7 @@ h2 {
   max-height: 54vw;
   border-radius: 3px;
 
+  object-fit: cover;
 }
 
 @media (min-width:692px) {
@@ -94,6 +95,11 @@ h2 {
 }
 
 @media (min-width:1000px) {
+  .combis:after {
+    content: "";
+    width: 30%;
+  }
+
   .combi {
     width: 30%;
   }
