@@ -5,26 +5,34 @@ class ActivitesController < ApplicationController
   # GET /activites.json
   def index
     @activites = Activite.all
+    authorize @activites
   end
 
   # GET /activites/1
   # GET /activites/1.json
   def show
+    render layout: false
+    @activite = Activite.find(params[:id])
+    authorize @activite
   end
 
   # GET /activites/new
   def new
     @activite = Activite.new
+    authorize @activite
   end
 
   # GET /activites/1/edit
   def edit
+    authorize @activite
   end
 
   # POST /activites
   # POST /activites.json
   def create
     @activite = Activite.new(activite_params)
+    # link the current user to the combi it create
+    @activite[:user_id] = current_user[:id]
 
     respond_to do |format|
       if @activite.save
@@ -69,6 +77,6 @@ class ActivitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activite_params
-      params.require(:activite).permit(:titre, :description, :location)
+      params.require(:activite).permit(:titre, :description, :location, :image)
     end
 end
