@@ -18,6 +18,6 @@ class RatesController < ApplicationController
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def rate_params
-        params.require(:rates).permit(:rate, :rateable_type, :rateable_id)
+        params.require(:rates).permit(:rate, :rateable_type, :rateable_id, :created_by)
       end
 end

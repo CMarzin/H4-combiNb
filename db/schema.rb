@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171214143003) do
+ActiveRecord::Schema.define(version: 20171216195813) do
 
   create_table "activites", force: :cascade do |t|
     t.string "titre"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20171214143003) do
     t.integer "rateable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "created_by"
     t.index ["rateable_type", "rateable_id"], name: "index_rates_on_rateable_type_and_rateable_id"
   end
 

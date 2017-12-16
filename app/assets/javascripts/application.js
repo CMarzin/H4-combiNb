@@ -17,16 +17,30 @@
 
 $(document).on('turbolinks:load', function() {
 
-
-    $('.rating input').click(function (e) {
+    var allRatingSpan =  document.querySelectorAll('.rating span');    
+    $('.rating span').click(function (e) {
 
       mydata = {
-        rate: e.target.value,
+        rate: e.target.dataset.value,
         rateable_type: e.target.dataset.type,
-        rateable_id: e.target.dataset.activiteId
+        rateable_id: e.target.dataset.userId,
+        created_by: e.target.dataset.creatorId,
       };
 
       console.log('mydata', mydata)
+
+      // NEED REFACTOR
+      // for (var i = 5; i > e.target.dataset.value.value; i--) {
+      //   console.log('i', i)
+      //   allRatingSpan[i].classList.add('gold')
+      //   if (i >= e.target.dataset.value.value) {
+      //     allRatingSpan[i].classList.add('gold')
+      //   } else {
+      //     allRatingSpan[i].classList.remove('gold')
+      //   }
+      // }
+
+
 
       $.ajax({
         type: "POST", 
