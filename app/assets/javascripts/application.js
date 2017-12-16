@@ -13,8 +13,11 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
 //= require jquery-ui
 
-$(function() {
-  $('.datepicker').datepicker();
+$(document).ready(function(){
+  $(function() {
+    $('.datepicker').datepicker();
+  });
 });

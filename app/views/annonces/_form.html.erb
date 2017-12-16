@@ -12,7 +12,7 @@
   <% end %>
 
   <%# Hidden Fields %>
-    <%= form.hidden_field :creator_id, id: :annonce_creator_id %>
+    <%= form.hidden_field :creator_id, id: :annonce_creator_id, value: current_user[:id] %>
 
   <%# Visible Fields %>
     <div class="field">
@@ -22,7 +22,7 @@
 
     <div class="field">
       <%= form.label :description %>
-      <%= form.text_area :description, id: :annonce_description, size: "100x30" %>
+      <%= form.text_area :description, id: :annonce_description, size: "30x30" %>
     </div>
 
     <div class="field">
@@ -37,7 +37,7 @@
 
     <div class="field">
       <%= form.label :end %>
-      <%= form.datetime_field :end, id: :annonce_end %>
+      <%= form.date_field :end, id: :annonce_end %>
     </div>
 
     <div class="field">

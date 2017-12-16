@@ -13,22 +13,21 @@
 
   <div class="field">
     <%= form.label :startTime %>
-    <%= form.text_field :startTime, id: :booking_startTime %>
+    <%= form.date_field :startTime, id: :booking_startTime, value: (@booking.startTime.to_s.empty? ? Date.today : @booking.startTime ) %>
   </div>
 
   <div class="field">
     <%= form.label :endTime %>
-    <%= form.text_field :endTime, id: :booking_endTime %>
+    <%= form.date_field :endTime, id: :booking_endTime, value: (@booking.endTime.to_s.empty? ? (Date.today + 1) : @booking.endTime ) %>
   </div>
 
   <div class="field">
     <%= form.label :annonce_id %>
-    <%= form.text_field :annonce_id, id: :booking_annonce_id %>
+    <%= collection_select(:booking, :annonce_id, Annonce.all, :id, :title) %>
   </div>
 
   <div class="field">
-    <%= form.label :client_id %>
-    <%= form.text_field :client_id, id: :booking_client_id %>
+    <%= form.hidden_field :client_id, id: :booking_client_id, value: current_user[:id]  %>
   </div>
 
   <div class="actions">
