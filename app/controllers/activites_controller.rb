@@ -35,7 +35,7 @@ class ActivitesController < ApplicationController
 
 
     respond_to do |format|
-      if @activite.save && @rating.save
+      if @activite.save
         format.html { redirect_to @activite, notice: 'Activite was successfully created.' }
         format.json { render :show, status: :created, location: @activite }
       else

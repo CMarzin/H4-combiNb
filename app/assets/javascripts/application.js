@@ -18,25 +18,26 @@
 $(document).on('turbolinks:load', function() {
 
 
-    $('.sending-rate').click(function () {
-      console.log('coucou')
+    $('.rating input').click(function (e) {
+
+      mydata = {
+        rate: e.target.value,
+        rateable_type: e.target.dataset.type,
+        rateable_id: e.target.dataset.activiteId
+      };
+
+      console.log('mydata', mydata)
+
+      $.ajax({
+        type: "POST", 
+        url: "/rates",
+        data: { rates: mydata },
+        success: function(response){
+          console.log('response success', response)
+        },
+        error: function(response){
+          console.log('response error', response)
+        }
+      });
     })
-
-    mydata = {
-      rate: 3,
-      rateable_type: "Combi",
-      rateable_id: 10
-    };
-
-    $.ajax({
-      type: "POST", 
-      url: "/rates",
-      data: { rates: mydata },
-      success: function(repsonse){
-        console.log('response success', response)
-      },
-      error: function(repsonse){
-        console.log('response error', response)
-      }
-    });
   });
