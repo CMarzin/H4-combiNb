@@ -16,15 +16,27 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
-  
-    console.log('coucou')
-    $('[data-js-search]').change(function(event) {
-      search_term = $(this).val();
-      alert('You are searching for ' + search_term);
-    });
 
-    console.log($('.rating input'));
-    console.log(document.querySelectorAll('.rating input'))
-  
-  
+
+    $('.sending-rate').click(function () {
+      console.log('coucou')
+    })
+
+    mydata = {
+      rate: 3,
+      rateable_type: "Combi",
+      rateable_id: 10
+    };
+
+    $.ajax({
+      type: "POST", 
+      url: "/rates",
+      data: { rates: mydata },
+      success: function(repsonse){
+        console.log('response success', response)
+      },
+      error: function(repsonse){
+        console.log('response error', response)
+      }
+    });
   });

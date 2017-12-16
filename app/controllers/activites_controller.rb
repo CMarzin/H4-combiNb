@@ -33,8 +33,9 @@ class ActivitesController < ApplicationController
     # link the current user to the combi it create
     @activite[:user_id] = current_user[:id]
 
+
     respond_to do |format|
-      if @activite.save
+      if @activite.save && @rating.save
         format.html { redirect_to @activite, notice: 'Activite was successfully created.' }
         format.json { render :show, status: :created, location: @activite }
       else
@@ -77,5 +78,9 @@ class ActivitesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def activite_params
       params.require(:activite).permit(:titre, :description, :location, :stars_number)
+    end
+
+    def rate_params
+      params.permit(:rate, :rateable_type, :rateable_id)
     end
 end

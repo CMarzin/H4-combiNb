@@ -1,4 +1,7 @@
 class Activite < ApplicationRecord
+
+  has_many :rates, as: :rateable
+
   scope :location, -> (location){where status: status}
   
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>"}, default_url:"/assets/birdies.jpg"
