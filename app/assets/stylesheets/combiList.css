@@ -80,6 +80,7 @@ h2 {
   max-height: 54vw;
   border-radius: 3px;
 
+  object-fit: cover;
 }
 
 @media (min-width:692px) {
