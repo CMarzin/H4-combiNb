@@ -1,5 +1,6 @@
 class Combi < ApplicationRecord
     has_many :annonces
+    has_many :rates, as: :rateable
     # belongs_to :user
 
     has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>"}, default_url:"/assets/combi_default.jpg"

@@ -35,6 +35,12 @@ class CombisController < ApplicationController
     # link the current user to the combi it create
     @combi[:user_id] = current_user[:id]
 
+    # Rate.new(
+    #   rateable_id: @combi[:user_id],
+    #   rateable_type: "Combi",
+    #   rate: 4
+    # ).save
+    
     respond_to do |format|
       if @combi.save
         format.html { redirect_to @combi, notice: 'Combi was successfully created.' }
