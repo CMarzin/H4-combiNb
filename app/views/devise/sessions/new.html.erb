@@ -1,25 +1,28 @@
-<h2>Log in</h2>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
+
+<h2 class="field__title">Connection</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :login %><br />
-    <%= f.text_field :login, autofocus: true %>
+  <div class="field__login">
+    <%= f.text_field :login, autofocus: true, placeholder: 'Nom d\'utilisateur' %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="field__pwd">
+    <%= f.password_field :password, autocomplete: "off", placeholder: 'Mot de passe' %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
-    <div class="field">
+    <div class="field__remember">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
+      
     </div>
   <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="actions field__validate">
+    <%= f.submit "Valider" %>
   </div>
 <% end %>
 

@@ -14,12 +14,12 @@ body {
 }
 
 /* SEARCH INPUT */
-form {
+.form__index {
   align-self: center;
 }
 
 
-input {
+.input__index {
   width: 80vw;
   height: 50px;
   margin-top: 15px;
