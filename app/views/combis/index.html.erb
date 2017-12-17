@@ -2,26 +2,15 @@
 <header>
   <meta name="viewport" content="width=device-width, initial-scale=1">  
 </header>
-
 <p id="notice"><%= notice %></p>
-
 <%= stylesheet_link_tag "combiList.css" %>
-
 <div class="container">
-
   <h1>Tous les <span class="text__red">Combis</span></h1>
-
   <div class="combis">
-  
     <% Combi.all.each do |combi| %>
-
       <div class="combi">
-
       <a href="<%= combi_path(combi) %>">
-      
       <img class="combi__img" src="<%= combi.avatar.url %>">
-      
-
       </a>
       <div class="combi__utilities">
         <div class="combi__info">
@@ -34,24 +23,12 @@
           <p><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></p>
         </div>
         <% end %>
-        
       </div>
-      
       </div>
-
     <% end %>
-
   </div>
-
 </div>
-
 <br>
-
 <% if policy(@combis).show? %>
   <%= link_to 'New Combi', new_combi_path %>
 <% end %>
-
-<!-- <% if policy(@combis).edit? %>
-          <td><%= link_to 'Edit', edit_combi_path(combi) %></td>
-          <td><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-<% end %>  %> -->
