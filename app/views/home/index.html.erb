@@ -1,7 +1,4 @@
-<%# A virer  %>
-<header>
-  <meta name="viewport" content="width=device-width, initial-scale=1">  
-</header>
+
 <%= stylesheet_link_tag "index.css" %>
 <div class="container">
 
@@ -19,6 +16,10 @@
     <a class="explore__item" href="<%= activites_path %>">
       <div class="explore__image explore__activite__image"></div>
       <p class="explore__text">Activités</p>
+    </a>
+    <a  class="explore__item" href="<%= annonces_path %>">
+      <div class="explore__image explore__annonce__image"></div>
+      <p class="explore__text">Annonces</p>
     </a>
   </div>
 
