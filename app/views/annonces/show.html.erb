@@ -35,6 +35,32 @@
   <%= @annonce.combi_id %>
 </p>
 
+<%= form_for(@booking, url: {controller: 'bookings', action: 'create'}) do |form| %>
+  <div class="field">
+    <%= form.label :startTime %>
+    <%= form.date_field :startTime, id: :booking_startTime, value: (@booking.startTime.to_s.empty? ? Date.today : @booking.startTime) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endTime %>
+    <%= form.date_field :endTime, id: :booking_endTime, value: (@booking.endTime.to_s.empty? ? Date.today + 1 : @booking.endTime) %>
+  </div>
+  
+  <div class="field">
+    <%= @annonce.id %>
+    <%= form.hidden_field :annonce_id, value: @annonce.id %>
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :client_id, value: current_user[:id] %>
+  </div>
+
+   <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+  
+
 <% if policy(@annonce).edit? %>
   <%= link_to 'Edit', edit_annonce_path(@annonce) %> |
 <% end %>

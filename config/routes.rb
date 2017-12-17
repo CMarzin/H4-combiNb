@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :bookings
   resources :activites
-  resources :annonces
+  resources :annonces do
+    resources :bookings
+  end
   resources :combis
   devise_for :users
   root 'home#index'

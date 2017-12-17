@@ -11,6 +11,8 @@ class AnnoncesController < ApplicationController
   # GET /annonces/1
   # GET /annonces/1.json
   def show
+    @booking = Booking.new
+    @annonce.booking.build({:startTime => "2017-12-23", :endTime => "2017-12-31", :annonce => @annonce, :client_id => current_user[:id]})
   end
 
   # GET /annonces/new
@@ -74,6 +76,7 @@ class AnnoncesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def annonce_params
-      params.require(:annonce).permit(:title, :description, :status, :creator_id, :location, :start, :end, :combi_id)
+      params.require(:annonce).permit(:title, :description, :status, :creator_id, :location, :start, :end, :combi_id,
+      booking_attributes: [:booking_id ,:startTime, :endTime])
     end
 end
