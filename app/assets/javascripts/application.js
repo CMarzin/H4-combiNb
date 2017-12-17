@@ -18,13 +18,12 @@
 
 $(document).on('turbolinks:load', function() {
   
-    $(function() {
-        let start = $('.start').val();
-        let end = $('.end').val();
+        var start = $('.start').val();
+        var end = $('.end').val();
         console.log(start);
         console.log(end);
 
-        let datepick_input = $('.datepicker')
+        var datepick_input = $('.datepicker')
         
         availableDates = datepick_input.data('availability')
 
@@ -46,7 +45,6 @@ $(document).on('turbolinks:load', function() {
             dateFormat: "yy-mm-dd",
             beforeShowDay: available
         });
-    });
 
     var allRatingSpan =  document.querySelectorAll('.rating span');
     var clicked = false;
