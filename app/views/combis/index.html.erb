@@ -1,45 +1,57 @@
+<%# A virer  %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Combis</h1>
+<%= stylesheet_link_tag "combiList.css" %>
 
-<ul>
-  <li>All</li>
-  <li>My Combis</li>
-</ul>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Marque</th>
-      <th>Year</th>
-      <th>Owner</th>
-      <th>Kilometers</th>
-      <th>Fueltype</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1>Tous les <span class="text__red">Combis</span></h1>
 
-  <tbody>
-    <% @combis.each do |combi| %>
-      <tr>
-        <td><%= combi.marque %></td>
-        <td><%= combi.year %></td>
-        <td><%= combi.owner %></td>
-        <td><%= combi.kilometers %></td>
-        <td><%= combi.fueltype %></td>
-        <td><%= image_tag combi.avatar.url(:medium) %></td>
-        <td><%= link_to 'Show', combi %></td>
-        <% if policy(combi).edit? %>
-          <td><%= link_to 'Edit', edit_combi_path(combi) %></td>
-          <td><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>        
-      </tr>
+  <div class="combis">
+  
+    <% Combi.all.each do |combi| %>
+
+      <div class="combi">
+
+      <a href="<%= combi_path(combi) %>">
+      
+      <img class="combi__img" src="<%= combi.avatar.url %>">
+      
+
+      </a>
+      <div class="combi__utilities">
+        <div class="combi__info">
+          <h2> <%= combi.marque %> </h2>
+          <p> <%= combi.year %> </p>
+        </div>
+        <% if policy(@combis).edit? %>
+        <div class="combi__actions">
+          <p><%= link_to 'Edit', edit_combi_path(combi) %></p>
+          <p><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </div>
+        <% end %>
+        
+      </div>
+      
+      </div>
+
     <% end %>
-  </tbody>
-</table>
+
+  </div>
+
+</div>
 
 <br>
 
 <% if policy(@combis).show? %>
   <%= link_to 'New Combi', new_combi_path %>
 <% end %>
+
+<!-- <% if policy(@combis).edit? %>
+          <td><%= link_to 'Edit', edit_combi_path(combi) %></td>
+          <td><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>  %> -->

@@ -46,6 +46,11 @@ h2 {
 
 .combi {
   width: 100%;
+  text-decoration: none;
+}
+
+.combi:hover {
+  text-decoration: none;
 }
 
 .combi__img {
@@ -54,6 +59,26 @@ h2 {
   border-radius: 3px;
 
   object-fit: cover;
+}
+
+.combi__utilities {
+  display: flex;
+}
+
+.combi__info {
+  width: 50%;
+}
+
+.combi__info h2 {
+  margin: 5px 0 0 0 ;
+}
+
+.combi__info p {
+  margin: 0 0 20px 0;
+}
+
+.combi__actions p {
+  margin-top: 0;
 }
 
 @media (min-width:692px) {
