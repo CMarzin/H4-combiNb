@@ -36,8 +36,46 @@
   line-height: 30px;
 }
 
+.edit_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit_user input {
+  width: 80vw;
+  height: 30px;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  line-height: 30px;
+}
+
+.user__avatar {
+  width: 80vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user__avatar img {
+  max-width: 50vw;
+  max-height: 30vw;
+  object-fit: cover;
+}
+
 @media (min-width: 692px) {
   .new_user input {
+    width: 60vw;
+    height: 40px;
+  }
+
+  .edit_user input {
     width: 60vw;
     height: 40px;
   }
