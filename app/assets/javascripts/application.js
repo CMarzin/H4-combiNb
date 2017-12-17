@@ -17,8 +17,29 @@
 
 $(document).on('turbolinks:load', function() {
 
-    var allRatingSpan =  document.querySelectorAll('.rating span');    
-    $('.rating span').click(function (e) {
+    var allRatingSpan =  document.querySelectorAll('.rating span');
+    var clicked = false;
+
+    $('.rating span').hover(function (e) {
+      for (var i = 0; i < 5; i++) {
+        if (i < e.target.dataset.value) {
+          allRatingSpan[i].classList.add('gold')
+        } else {
+          allRatingSpan[i].classList.remove('gold')
+        }
+      }
+    });
+
+    $('.rating').mouseleave(function() {
+      if (clicked === false) {
+        for (var i = 0; i < 5; i++) {
+          allRatingSpan[i].classList.remove('gold')
+        }
+      }
+    });
+
+    $('.rate_button').click(function (e) {
+      clicked = true
 
       mydata = {
         rate: e.target.dataset.value,
@@ -27,31 +48,31 @@ $(document).on('turbolinks:load', function() {
         created_by: e.target.dataset.creatorId,
       };
 
-      console.log('mydata', mydata)
-
-      // NEED REFACTOR
-      // for (var i = 5; i > e.target.dataset.value.value; i--) {
-      //   console.log('i', i)
-      //   allRatingSpan[i].classList.add('gold')
-      //   if (i >= e.target.dataset.value.value) {
-      //     allRatingSpan[i].classList.add('gold')
-      //   } else {
-      //     allRatingSpan[i].classList.remove('gold')
-      //   }
-      // }
-
-
-
-      $.ajax({
-        type: "POST", 
-        url: "/rates",
-        data: { rates: mydata },
-        success: function(response){
-          console.log('response success', response)
-        },
-        error: function(response){
-          console.log('response error', response)
+      for (var i = 0; i < 5; i++) {
+        if (i < e.target.dataset.value) {
+          allRatingSpan[i].classList.add('gold')
+        } else {
+          allRatingSpan[i].classList.remove('gold')
         }
-      });
-    })
+      }
+
+      if (mydata.rate === undefined) {
+        alert('you need to choose a rate');
+      } else {
+        $.ajax({
+          type: "POST", 
+          url: "/rates",
+          data: { rates: mydata },
+          success: function(response){
+            console.log('response success', response)
+          },
+          error: function(response){
+            console.log('response error', response)
+          }
+        });
+      }
+
+    });
   });
+
+

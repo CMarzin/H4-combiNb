@@ -2,21 +2,55 @@
 <h2><%= @user.email %></h2>
 <%= image_tag @user.avatar.url %>
 
+
+
 <h3>Rating</h3>
-<% unless @rated %>
+<% if policy(Rate).not_connected? %>
+
+  <p>not connected</p>
   <div class="rating">
     <% for i in 1..@max_rating do %>
-      <span class="not-rated" data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User" data-value="<%= i %>">☆</span>  
+      <span class="not-rated">☆</span>  
     <% end %>
   </div>
-<% else %>
+
+  <% elsif @rated_by_current_user %>
+
+  <p>you already rated this person</p>
+  <p>you rated <%= @user.username %> : <%= @rated_by_current_user.rate %></p>
   <div class="rating">
     <% for i in 1..@max_rating do %>
-      <% if i <= @rated.rate %>
+      <% if i <= @rated_by_current_user.rate %>
         <span class="gold" data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User" data-value="<%= i %>">☆</span>
       <% else %>
         <span data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User">☆</span>
       <% end %>
     <% end %>
   </div>
+
+  <% elsif current_user.id === @user.id && @rated_by_current_user %>
+
+  <p>Your rating :</p>
+  <div class="rating">
+    <% for i in 1..@max_rating do %>
+      <% if i <= @rated_by_current_user.rate %>
+        <span class="gold" data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User" data-value="<%= i %>">☆</span>
+      <% else %>
+        <span data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User">☆</span>
+      <% end %>
+    <% end %>
+  </div>
+
+  <% else %>
+  
+  <p>Not rated this person yet</p>
+  <div class="rating">
+    <% for i in 1..@max_rating do %>
+      <span class="not-rated" data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User" data-value="<%= i %>">☆</span>
+    <% end %>
+  </div>
+  <button class="rate_button"> Rate </button>
+
 <% end %>
+
+

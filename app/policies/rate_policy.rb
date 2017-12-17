@@ -4,11 +4,11 @@ class RatePolicy < ApplicationPolicy
     true
   end
 
-  def show_rated?
-    return false if rated 
+  def not_connected?
+    return true unless user.present?
   end
 
-  private 
+  private
 
     def rated
       record
