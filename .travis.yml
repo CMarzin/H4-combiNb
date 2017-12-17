@@ -12,3 +12,4 @@ deploy:
     staging: hetic-g1-e1-staging
   run:
   - rake db:migrate
+  - bundle exec rake assets:precompile
