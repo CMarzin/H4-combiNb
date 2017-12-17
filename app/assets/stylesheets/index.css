@@ -177,11 +177,6 @@ h1 {
   }
 }
 
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-}
-
 .rate_button {
   width: 50px;
 }
