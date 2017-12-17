@@ -1,5 +1,26 @@
 @import url('fonts.css');
 
+.header__content {
+  display: flex;
+  margin-left: 7vw;
+}
+
+.header__content a {
+  margin-right: 10px;
+  border-radius: 3px;
+  background-color: #DDD;
+  display: inline-block;
+  width: 150px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+}
+.header__content a:hover {
+  box-shadow: 2px 2px 4px #AAA;
+  color: #666;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -82,6 +103,10 @@ body {
   background-image: url('/assets/birdies.jpg');
 }
 
+.explore__annonce__image {
+  background-image: url('/assets/annonces.jpg');
+}
+
 /* TEXT-RELATED STUFF */
 h1 {
   font-family: "avenir-next-bold";
@@ -95,6 +120,33 @@ h1 {
 
 .text__red {
   color: #F52A12;
+}
+
+.rate_button {
+  width: 50px;
+}
+
+.rating > .not-rated {
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.rating > .gold:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
+
+.rated > .gold:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
+
+.hide {
+  transition: 0.5s ease;
+  opacity: 0;
+  z-index: -99999;
 }
 
 .text {
@@ -195,31 +247,4 @@ h1 {
     content: "";
     width: 26vw;
   }
-}
-
-.rate_button {
-  width: 50px;
-}
-
-.rating > .not-rated {
-  cursor: pointer;
-  transition: 0.5s ease;
-}
-
-.rating > .gold:before {
-  content: "\2605";
-  position: absolute;
-  color: gold;
-}
-
-.rated > .gold:before {
-  content: "\2605";
-  position: absolute;
-  color: gold;
-}
-
-.hide {
-  transition: 0.5s ease;
-  opacity: 0;
-  z-index: -99999;
 }

@@ -4,30 +4,17 @@
 </header>
 <%= stylesheet_link_tag "index.css" %>
 <div class="container">
-
-  <form action="/pages/results" method="GET">  
-    <input class="search__input" type="text" value=<%= params.values[0] %> name="ville"></input>
+  <form class="form__index" action="/pages/results" method="GET">  
+    <input class="input__index" type="text" value=<%= params.values[0] %> name="ville"></input>
   </form>
-
   <h1>Explorer <span class="text__red"><%= params.values[0] %></span></h1>
 
-  <h1><span class="text__red">Activités</span> populaires</h1>
-
-  <h1>Toutes les <span class="text__red">Activités</span></h1>
-
   <div class="activites">
-
     <% Activite.where(location: params.values[0]).each do |act| %>
-
     <a class="activite" href="<%= activite_path(act)%>">
-
       <img class="activite__img" src="<%= act.image.url %>" >
       <p class='text'><%= act.titre %></p>
-
     </a>
-
     <% end %>
-
   </div>
-
 </div>
