@@ -28,12 +28,25 @@ $(document).on("turbolinks:load", ()=>{
 
         let datepick_input = $('.datepicker')
         
-        console.log(datepick_input.data('availability'))
+        availableDates = datepick_input.data('availability')
+
+        console.log(availableDates)
+
+        function available(date) {
+            dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+            console.log(dmy)
+            if ($.inArray(dmy, availableDates) != -1) {
+                console.log("true")
+                return [true, "","Available"];
+            } else {
+                console.log("false")
+                return [false,"","unAvailable"];
+            }
+        }
 
         datepick_input.datepicker({
             dateFormat: "yy-mm-dd",
-            minDate: start,
-            // maxDate: 
+            beforeShowDay: available
         });
     });
 })

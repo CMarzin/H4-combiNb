@@ -31,7 +31,7 @@ class Annonce < ApplicationRecord
         @range = Array.new
 
         (0..range_of_days.to_i).each do |i|
-            date = (self.startTime.to_date. + i).strftime('%Y-%m-%d')
+            date = (self.startTime.to_date. + i).strftime('%Y-%-m-%-d')
             @range.push(date)
         end
 

@@ -57,9 +57,10 @@
   </div>
   
   <div class="field">
-    <%= @annonce.id %>
     <%= form.hidden_field :annonce_id, value: @annonce.id %>
   </div>
+
+  <%= @annonce.bookings %>
 
   <div class="field">
     <%= form.hidden_field :client_id, value: current_user[:id] %>
