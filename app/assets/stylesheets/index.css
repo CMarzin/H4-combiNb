@@ -1,5 +1,26 @@
 @import url('fonts.css');
 
+.header__content {
+  display: flex;
+  margin-left: 7vw;
+}
+
+.header__content a {
+  margin-right: 10px;
+  border-radius: 3px;
+  background-color: #DDD;
+  display: inline-block;
+  width: 150px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+}
+.header__content a:hover {
+  box-shadow: 2px 2px 4px #AAA;
+  color: #666;
+}
+
 body {
   display: flex;
   flex-direction: column;
