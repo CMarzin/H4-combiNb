@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20171214084326) do
+ActiveRecord::Schema.define(version: 20171216195813) do
   
   create_table "activites", force: :cascade do |t|
     t.string "titre"
@@ -71,6 +70,16 @@ ActiveRecord::Schema.define(version: 20171214084326) do
     t.integer "user_id"
     t.integer "stars_number"
     t.index ["user_id"], name: "index_combis_on_user_id"
+  end
+
+  create_table "rates", force: :cascade do |t|
+    t.integer "rate"
+    t.string "rateable_type"
+    t.integer "rateable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "created_by"
+    t.index ["rateable_type", "rateable_id"], name: "index_rates_on_rateable_type_and_rateable_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,6 @@
+<% @users = User.all %>
+<% @users.each do |user| %>
+  <%= link_to user.username, profile_path(user.username) %><br/>
+  <%= user.email %><br/>
+  <%= image_tag user.avatar.url %>
+<% end %>
