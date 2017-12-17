@@ -69,6 +69,3 @@ gem "travis", "= 1.8.8"
 gem 'paperclip'
 # Added at 2017-12-17 18:01:57 +0100 by hadrienlepoutre:
 gem "jquery-ui-rails", "~> 6.0"
-
-# Added at 2017-12-17 18:06:42 +0100 by hadrienlepoutre:
-gem "jquery-rails", "~> 4.3"
