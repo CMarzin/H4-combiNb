@@ -22,12 +22,12 @@
 
 <p>
   <strong>Start:</strong>
-  <%= @annonce.start %>
+  <%= @annonce.startTime %>
 </p>
 
 <p>
   <strong>End:</strong>
-  <%= @annonce.end %>
+  <%= @annonce.endTime %>
 </p>
 
 <p>
@@ -36,14 +36,24 @@
 </p>
 
 <%= form_for(@booking, url: {controller: 'bookings', action: 'create'}) do |form| %>
+
   <div class="field">
     <%= form.label :startTime %>
-    <%= form.date_field :startTime, id: :booking_startTime, value: (@booking.startTime.to_s.empty? ? Date.today : @booking.startTime) %>
+    <%= form.text_field :startTime, 
+      id: :booking_startTime,
+      value: (@booking.startTime.to_s.empty? ? Date.today : @booking.startTime),
+      :class => "datepicker start",
+      data: { availability: @annonce.availability }
+    %>
   </div>
 
   <div class="field">
     <%= form.label :endTime %>
-    <%= form.date_field :endTime, id: :booking_endTime, value: (@booking.endTime.to_s.empty? ? Date.today + 1 : @booking.endTime) %>
+    <%= form.text_field :endTime,
+      id: :booking_endTime,
+      value: (@booking.endTime.to_s.empty? ? Date.today + 1 : @booking.endTime),
+      :class => "datepicker end"
+    %>
   </div>
   
   <div class="field">

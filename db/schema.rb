@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171217045039) do
+ActiveRecord::Schema.define(version: 20171217180335) do
 
   create_table "activites", force: :cascade do |t|
     t.string "titre"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20171217045039) do
     t.string "description"
     t.string "creator_id"
     t.string "location"
-    t.string "start"
-    t.string "end"
+    t.string "startTime"
+    t.string "endTime"
     t.integer "combi_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

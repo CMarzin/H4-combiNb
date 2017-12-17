@@ -12,7 +12,7 @@ class AnnoncesController < ApplicationController
   # GET /annonces/1.json
   def show
     @booking = Booking.new
-    @annonce.booking.build({:startTime => "2017-12-23", :endTime => "2017-12-31", :annonce => @annonce, :client_id => current_user[:id]})
+    @annonce.bookings.build({:startTime => "2017-12-23", :endTime => "2017-12-31", :annonce => @annonce, :client_id => current_user[:id]})
   end
 
   # GET /annonces/new

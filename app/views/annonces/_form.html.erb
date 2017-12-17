@@ -31,13 +31,21 @@
     </div>
 
     <div class="field">
-      <%= form.label :start %>
-      <%= form.date_field :start, id: :annonce_start, value: (@annonce.start.to_s.empty? ? Date.today : @annonce.start) %>
+      <%= form.label :startTime %>
+      <%= form.text_field :startTime,
+        id: :annonce_start,
+        value: (@annonce.startTime.to_s.empty? ? Date.today : @annonce.startTime),
+        class: "datepicker start" 
+      %>
     </div>
 
     <div class="field">
-      <%= form.label :end %>
-      <%= form.date_field :end, id: :annonce_end, value: (@annonce.end.to_s.empty? ? Date.today + 1 : @annonce.end) %>
+      <%= form.label :endTime %>
+      <%= form.text_field :endTime,
+        id: :annonce_end,
+        value: (@annonce.endTime.to_s.empty? ? Date.today + 1 : @annonce.endTime),
+        class: "datepicker end" 
+      %>
     </div>
 
     <div class="field">

@@ -13,3 +13,27 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery3
+//= require jquery_ujs
+//= require jquery-ui
+
+
+$(document).on("turbolinks:load", ()=>{
+
+    $(function() {
+        let start = $('.start').val();
+        let end = $('.end').val();
+        console.log(start);
+        console.log(end);
+
+        let datepick_input = $('.datepicker')
+        
+        console.log(datepick_input.data('availability'))
+
+        datepick_input.datepicker({
+            dateFormat: "yy-mm-dd",
+            minDate: start,
+            // maxDate: 
+        });
+    });
+})

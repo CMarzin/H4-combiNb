@@ -23,8 +23,8 @@
         <td><%= annonce.description %></td>
         <td><%= User.find(annonce.creator_id).username %></td>
         <td><%= annonce.location %></td>
-        <td><%= annonce.start %></td>
-        <td><%= annonce.end %></td>
+        <td><%= annonce.startTime %></td>
+        <td><%= annonce.endTime %></td>
         <% combi = Combi.find(annonce.combi_id) %>
         <td><%= "#{combi.marque} #{combi.year}" %></td>
         <td><%= link_to 'Show', annonce %></td>        
