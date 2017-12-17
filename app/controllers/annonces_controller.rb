@@ -76,7 +76,7 @@ class AnnoncesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def annonce_params
-      params.require(:annonce).permit(:title, :description, :status, :creator_id, :location, :start, :end, :combi_id,
+      params.require(:annonce).permit(:title, :description, :status, :creator_id, :location, :startTime, :endTime, :combi_id,
       booking_attributes: [:booking_id ,:startTime, :endTime])
     end
 end

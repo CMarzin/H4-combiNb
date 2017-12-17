@@ -6,20 +6,24 @@ class Annonce < ApplicationRecord
     accepts_nested_attributes_for :bookings
 
     def availability
-        range_of_days = generate_date_range(self.startTime, self.endTime)
-        @availability = generate_array_of_dates(range_of_days)
+        if self.startTime? && self.endTime?
+            range_of_days = generate_date_range(self.startTime, self.endTime)
+            @availability = generate_array_of_dates(range_of_days)
 
-        self.bookings.each do |booking|
-            puts
-            booking_range_of_days =  generate_date_range(booking.startTime.to_s, booking.endTime.to_s)
-            booking_date_range = generate_array_of_dates(booking_range_of_days)
-            @availability = @availability - booking_date_range
+            self.bookings.each do |booking|
+                puts
+                booking_range_of_days =  generate_date_range(booking.startTime.to_s, booking.endTime.to_s)
+                booking_date_range = generate_array_of_dates(booking_range_of_days)
+                @availability = @availability - booking_date_range
+            end
+
+            puts "======= FINAL Annonce Availability ========="
+            puts @availability
+
+            return @availability
+        else
+            return @availability = []
         end
-
-        puts "======= FINAL Annonce Availability ========="
-        puts @availability
-
-        return @availability
     end
 
     def generate_date_range(startTime, endTime)

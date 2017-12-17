@@ -3,19 +3,17 @@
 # one:
 #   title: MyString
 #   description: MyString
-#   status: MyString
 #   creator_id: MyString
 #   location: MyString
-#   start: MyString
-#   end: MyString
+#   startTime: MyString
+#   endTime: MyString
 #   combi_id: MyString
 
 # two:
 #   title: MyString
 #   description: MyString
-#   status: MyString
 #   creator_id: MyString
 #   location: MyString
-#   start: MyString
-#   end: MyString
+#   startTime: MyString
+#   endTime: MyString
 #   combi_id: MyString

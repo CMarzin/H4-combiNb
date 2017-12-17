@@ -30,30 +30,23 @@
     </div>
 
     <div class="field__annonce">
-      <%= form.label :status %>
-      <%= form.select :status, ['Available', 'Booked', 'Draft'],id: :annonce_status %>
-    </div>
-
-    <div class="field__annonce">
       <%= form.label :location %>
       <%= form.text_field :location, id: :annonce_location %>
     </div>
 
     <div class="field__annonce">
       <%= form.label :startTime %>
-      <%= form.text_field :startTime,
-        id: :annonce_start,
-        value: (@annonce.startTime.to_s.empty? ? Date.today : @annonce.startTime),
-        class: "datepicker start" 
+      <%= form.date_field :startTime,
+        id: :annonce_startTime,
+        value: (@annonce.startTime.to_s.empty? ? Date.today : @annonce.startTime)
       %>
     </div>
 
     <div class="field__annonce">
       <%= form.label :endTime %>
-      <%= form.text_field :endTime,
-        id: :annonce_end,
-        value: (@annonce.endTime.to_s.empty? ? Date.today + 1 : @annonce.endTime),
-        class: "datepicker end" 
+      <%= form.date_field :endTime,
+        id: :annonce_endTime,
+        value: (@annonce.endTime.to_s.empty? ? Date.today + 1 : @annonce.endTime)
       %>
     </div>
 

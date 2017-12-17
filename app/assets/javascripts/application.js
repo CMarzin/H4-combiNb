@@ -17,11 +17,6 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
-  
-        var start = $('.start').val();
-        var end = $('.end').val();
-        console.log(start);
-        console.log(end);
 
         var datepick_input = $('.datepicker')
         
@@ -29,22 +24,31 @@ $(document).on('turbolinks:load', function() {
 
         console.log(availableDates)
 
-        function available(date) {
-            dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
-            console.log(dmy)
-            if ($.inArray(dmy, availableDates) != -1) {
-                console.log("true")
-                return [true, "","Available"];
-            } else {
-                console.log("false")
-                return [false,"","unAvailable"];
-            }
-        }
+        if(availableDates){
+          function available(date) {
+              dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+              console.log(dmy)
+              if ($.inArray(dmy, availableDates) != -1) {
+                  console.log("true")
+                  return [true, "","Available"];
+              } else {
+                  console.log("false")
+                  return [false,"","unAvailable"];
+              }
+          }
 
-        datepick_input.datepicker({
+          datepick_input.datepicker({
+              dateFormat: "yy-mm-dd",
+              beforeShowDay: available
+          });
+        }
+        else {
+          datepick_input.datepicker({
             dateFormat: "yy-mm-dd",
-            beforeShowDay: available
-        });
+            minDate: $('.start').val(),
+            maxDate: $('.end').val()
+          });
+        }
 
     var allRatingSpan =  document.querySelectorAll('.rating span');
     var clicked = false;
