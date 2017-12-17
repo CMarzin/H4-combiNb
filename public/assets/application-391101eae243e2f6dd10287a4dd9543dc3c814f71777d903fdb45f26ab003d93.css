@@ -1,0 +1,913 @@
+@import 'fonts.css';
+
+body {
+  margin: 0;
+}
+
+.activite__header {
+  height: 60vh;
+
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.activite__button {
+  margin-top: 20px;
+  margin-left: 4vw;
+  padding: 0;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.activite__title {
+  font-family: 'avenir-next-bold';
+  font-size: 1.7em;
+  color: white;
+  text-shadow: 0 2px 4px #333;
+
+  margin-bottom: 10px;
+  margin-left: 4vw;
+}
+
+.activite__content {
+  margin: 4vw;
+
+  font-size: 1em;
+  font-family: 'avenir-next';
+  color: #4A4A4A;
+}
+
+.activite__content__header {
+  margin-bottom: 20px;
+
+  font-size: 1.3em;
+}
+
+.activite__content__text {
+  margin: 0;
+}
+@import 'fonts.css';
+
+body {
+  margin: 0;
+}
+
+.combi__header {
+  height: 60vh;
+
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.combi__button {
+  margin-top: 20px;
+  margin-left: 4vw;
+  padding: 0;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.combi__title {
+  font-family: 'avenir-next-bold';
+  font-size: 1.7em;
+  color: white;
+  text-shadow: 0 2px 4px #333;
+
+  margin-bottom: 10px;
+  margin-left: 4vw;
+}
+
+.combi__content {
+  margin: 4vw; 
+}
+
+.combi__content__title {
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+
+  color: #4A4A4A;
+}
+
+.combi__content__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  font-family: 'avenir-next'
+}
+
+.combi__content__list__entry {
+  width: 42vw;
+}
+
+
+@import 'fonts.css';
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #F9F9F9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  align-self: center;
+}
+
+/* TEXT STUFF */ 
+
+h1 {
+  font-family: 'avenir-next-bold';
+  font-size: 1.7em;
+  color: #3A3A3A;
+}
+
+h2 {
+  font-family: 'avenir-next';
+  font-size: 1.3em;
+  color: #3A3A3A;
+}
+
+.text__red {
+  color: #F52A12;
+}
+
+/* COMBI STUFF */
+
+.container {
+  display: flex;
+}
+
+.combis {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.combi {
+  width: 100%;
+}
+
+.combi__img {
+  width: 100%;
+  max-height: 54vw;
+  border-radius: 3px;
+
+  object-fit: cover;
+}
+
+@media (min-width:692px) {
+  .combi {
+    width: 47%;
+
+  }
+
+  .combi__img {
+    max-height: 25vw;
+  }
+}
+
+@media (min-width:1000px) {
+  .combis:after {
+    content: "";
+    width: 30%;
+  }
+
+  .combi {
+    width: 30%;
+  }
+
+  .combi__img {
+    max-height: 16vw;
+  }
+}
+
+@font-face {
+  font-family: "avenir-next";
+  src: url("/assets/avenir-next.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "avenir-next-bold";
+  src: url("/assets/avenir-next-bold.otf") format("truetype");
+}
+@import "fonts.css";
+
+.field__title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.field__info {
+  width: 50vw;
+  color: #4A4A4A;
+  font-family: 'avenir-next';
+  font-style: normal;
+  text-align: center;
+  display: inline-block;
+  
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_user input {
+  width: 80vw;
+  height: 30px;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  line-height: 30px;
+}
+
+.edit_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit_user input {
+  width: 80vw;
+  height: 30px;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  line-height: 30px;
+}
+
+.user__avatar {
+  width: 80vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user__avatar img {
+  max-width: 50vw;
+  max-height: 30vw;
+  object-fit: cover;
+}
+
+@media (min-width: 692px) {
+  .new_user input {
+    width: 60vw;
+    height: 40px;
+  }
+
+  .edit_user input {
+    width: 60vw;
+    height: 40px;
+  }
+}
+
+.field__login {
+  width: 80vw;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.field__pwd {
+  width: 80vw;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.field__remember {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+
+  margin-bottom: 30px;
+}
+
+.field__remember input {
+  width: auto;
+}
+
+#user_remember_me {
+  margin: 0 10px 0 0;
+}
+
+.field__validate input {
+  background-color: rgb(211, 84, 70);
+  border: none;
+  font-family: 'avenir-next-bold';
+  font-size: 1.2em;
+  text-align: center;
+  color: white;
+  box-shadow: 2px 2px 4px #DDD;
+}
+
+.field__validate input:hover {
+  background-color:  rgb(209, 119, 109);
+}
+
+/* COMBIS */
+
+.form__combi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .field__combi{
+  width: 50vw;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: center;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+} */
+
+.field__combi input {
+  width: 80vw;
+  height: 30px;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  line-height: 30px;
+}
+
+.combi__validate input {
+  width: 80vw;
+  height: 40px;
+}
+
+@media (min-width: 692px) {
+  .field__combi input {
+    width: 60vw;
+    height: 40px;
+  }
+
+  .combi__validate input {
+    width: 60vw;
+    height: 40px;
+  }
+}
+
+
+
+.field__combi__avatar {
+  width: 80vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+/* ACTIVITES */
+
+.field__activite input{
+  width: 80vw;
+  height: 30px;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  line-height: 30px;
+}
+
+.text-area__activite textarea{
+  width: 80vw;
+  height: 30vw;
+  border: none;
+  background-color: #FAFAFA; 
+  box-shadow: 2px 2px 4px #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+}
+
+.text-area__activite label {
+  margin-bottom: 10px;
+}
+
+.form__activites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field__activite__image {
+  width: 80vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.field__activite__image img {
+  max-width: 50vw;
+  max-height: 30vw;
+  object-fit: cover;
+}
+
+.activites__validate input {
+  width: 80vw;
+  height: 40px;
+}
+
+@media (min-width: 692px) {
+  .activites__validate input {
+    width: 60vw;
+  }
+
+  .field__activite input {
+    width: 60vw;
+    height: 40px;
+  }
+
+  .field__activite__image {
+    width: 60vw;
+  }
+
+  .text-area__activite textarea {
+    width: 60vw;
+  }
+}
+
+/* ANNONCES */
+
+.form__annonces {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field__annonce input {
+  width: 80vw;
+  height: 30px;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  padding-left: 5px;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.field__annonce textarea{
+  width: 80vw;
+  height: 30vw;
+  border: none;
+  background-color: #FAFAFA; 
+  box-shadow: 2px 2px 4px #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+}
+
+.annonces__validate input {
+  width: 80vw;
+  height: 40px;
+  margin-top: 30px;
+}
+
+@media (min-width: 692px) {
+  .field__annonce input {
+    width: 60vw;
+    height: 40px;
+  }
+
+  .field__annonce textarea {
+    width: 60vw;
+  }
+
+  .annonces__validate input {
+    width: 60vw;
+  }
+}
+
+@import url('fonts.css');
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #F9F9F9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  align-self: center;
+}
+
+/* SEARCH INPUT */
+.form__index {
+  align-self: center;
+}
+
+
+.input__index {
+  width: 80vw;
+  height: 50px;
+  margin-top: 15px;
+  padding-left: 40px;
+  padding-top: 5px;
+
+  border: none;
+  border-radius: 3pxs;
+  box-shadow: 0 0 4px #DDD;
+  
+  font-size: 1em;
+  font-family: 'avenir-next';
+  color: #4A4A4A;
+
+  /* manages the icon */
+  background-image: url("/assets/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 16px;
+}
+
+
+.explore {
+  display: flex;
+}
+
+.explore__item {
+  margin-right: 2vw;
+
+  text-decoration: none;
+}
+
+.explore__text {
+  font-family: 'avenir-next';
+  color: #4A4A4A;
+  font-size: 0.8em;
+}
+
+.explore__image {
+  height: 100px;
+  width: 100px;
+
+  background-size: cover;
+}
+
+.explore__combi__image {
+  background-image: url('/assets/combi_default.jpg');
+}
+
+.explore__activite__image {
+  background-image: url('/assets/birdies.jpg');
+}
+
+/* TEXT-RELATED STUFF */
+h1 {
+  font-family: "avenir-next-bold";
+  font-size: 1.7em;
+  color: #3A3A3A;
+}
+
+.text__red {
+  color: #F52A12;
+}
+
+.text {
+  font-family: "avenir-next";
+  color: #3A3A3A;
+  font-size: 15px;
+}
+
+/* ACTIVITIES */
+
+.activites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.activite {
+
+  text-decoration: none;
+}
+
+.activite__img {
+  width: 39vw;
+  height: 25vw;
+
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+@media (min-width: 692px) {
+  .activites:after {
+    content: "";
+    width: 26vw;
+  }
+
+  .activite__img {
+    width: 26vw;
+    height: 17vw;
+  }
+} 
+
+@media (min-width: 1000px) {
+  .activites:after {
+    content: "";
+    width: 19vw;
+  }
+
+  .activite__img {
+    width: 19vw;
+    height: 12vw;
+  }
+}
+
+/* INDEX ACTIVITES */
+
+.activites__index {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.activites__index__titre {
+  font-family: 'avenir-next';
+  color:#4A4A4A;
+
+}
+
+.activites__index__container {
+  width: 39vw;
+  text-decoration: none;
+}
+
+
+
+.activites__index__image {
+  width: 100%;
+  height: 27vw;
+
+  object-fit: cover;
+}
+
+@media (min-width: 692px) {
+  .activites__index__container {
+    width: 26vw;
+  }
+
+  .activites__index__image {
+    height: 15vw;
+  }
+
+  .activites__index:after {
+    content: "";
+    width: 26vw;
+  }
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > .not-rated {
+  cursor: pointer;
+}
+
+.rating > .not-rated:hover:before,
+.rating > .not-rated:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   color: gold;
+}
+
+.rating > .gold:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
+
+/* .rating > .gold:hover:before {
+  content: "\2605";
+  position: absolute;
+  color: black;
+} */
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+ follow these rules. Every browser that supports :checked also supports :not(), so
+ it doesn’t make the test unnecessarily selective */
+/* .rating:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+  clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+  float:right;
+  width:1em;
+  padding:0 .1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:200%;
+  line-height:1.2;
+  color:#ddd;
+  text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.rating > input:checked ~ label {
+  color: #f70;
+  text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: gold;
+  text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #ea0;
+  text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+  position:relative;
+  top:2px;
+  left:2px;
+} */
+/* line 1, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /Users/Whorthy/Documents/Web/ruby/H4-combiNb/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+ @import 'forms.css';
