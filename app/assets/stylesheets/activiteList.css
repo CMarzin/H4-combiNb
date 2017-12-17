@@ -43,6 +43,9 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.activite:hover {
+  background-color: #F9F9F9;
+}
 
 .activite {
   width: 100%;
