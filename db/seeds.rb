@@ -13,4 +13,4 @@ Combi.create(marque: 'Ford', year: '1964', kilometers: 123456, fueltype: "Super 
 Combi.create(marque: 'Peugeot', year: '2016', kilometers: 765, fueltype: "Diesel", owner: 2)
 
 Annonce.create(title: 'Annonce 1', description: 'Lorem ipsum lorem', location: 'Paris', startTime:'2017-12-17', endTime:'2017-12-31', creator_id: 1)
-Annonce.create(title: 'Annonce 2', description: 'Ipsum lorem Ipsum', location: 'Amsterdam', startTime:'2017-12-20', endTime :'2018-01-15', creator_id: 2)
+Annonce.create(title: 'Annonce 2', description: 'Ipsum lorem Ipsum', location: 'Amsterdam', startTime:'2017-12-20', endTime:'2018-01-15', creator_id: 2)
