@@ -55,7 +55,7 @@ h1 {
 
 .rating {
   unicode-bidi: bidi-override;
-  direction: rtl;
+  text-align: right;
 }
 .rating > span {
   display: inline-block;
