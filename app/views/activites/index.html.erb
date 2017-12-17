@@ -1,38 +1,34 @@
+<%# A virer  %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
 <p id="notice"><%= notice %></p>
-
-<h1>Activites</h1>
-Search <%= text_field_tag 'search', '', data: {'js-search' => true} %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Titre</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Note</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-
-  <tbody>
-    <% @activites.each_with_index do |activite, index| %>
-      <tr>
-        <td><%= activite.titre %></td>
-        <td><%= activite.description %></td>
-        <td><%= activite.location %></td>
-        <td><%= activite.stars_number %></td>
-        <td><%= link_to 'Show', activite %></td>
-      <% if policy(activite).show_button? %>
-       <td><%= link_to 'Edit', edit_activite_path(activite) %></td>
-        <td><%= link_to 'Destroy', activite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-      </tr>
+<%= stylesheet_link_tag "activiteList.css" %>
+<div class="container">
+  <h1>Tous les <span class="text__red">activites</span></h1>
+  <div class="activites">
+    <% @activites.each do |activite| %>
+      <div class="activite">
+        <a class="activite__link" href="<%= activite_path(activite) %>">
+          <img class="activite__img" src="<%= activite.image.url %>">
+        </a>
+        <div class="activite__utilities">
+          <div class="activite__info">
+            <h2> <%= activite.titre %> </h2>
+            <p> <%= activite.location %> </p>
+          </div>
+          <% if policy(activite).edit? %>
+            <div class="activite__actions">
+              <p><%= link_to 'Edit', edit_activite_path(activite) %></p>
+              <p><%= link_to 'Destroy', activite, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+  <% if policy(@activites).show? %>
+    <p class="activite__add"><%= link_to 'New activite', new_activite_path %></p>
+  <% end %>
+</div>
 
-<br>
-<% if policy(@activites).show? %>
-  <%= link_to 'New Activite', new_activite_path %>
-<% end %>
