@@ -1,44 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Annonces</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Creator</th>
-      <th>Location</th>
-      <th>Start</th>
-      <th>End</th>
-      <th>Combi</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @annonces.each do |annonce| %>
-      <tr>
-        <td><%= annonce.title %></td>
-        <td><%= annonce.description %></td>
-        <td><%= User.find(annonce.creator_id).username %></td>
-        <td><%= annonce.location %></td>
-        <td><%= annonce.startTime %></td>
-        <td><%= annonce.endTime %></td>
-        <% combi = Combi.find(annonce.combi_id) %>
-        <td><%= "#{combi.marque} #{combi.year}" %></td>
-        <td><%= link_to 'Show', annonce %></td>        
-        <% if policy(annonce).show_button? %>
-          <td><%= link_to 'Edit', edit_annonce_path(annonce) %></td>
-          <td><%= link_to 'Destroy', annonce, method: :delete, data: { confirm: 'Are you sure?' } %></td>          
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<%= stylesheet_link_tag "annonces.css" %>
+<div class="container">
+  <h1>Toutes les <span class="text__red">Annonces</span></h1>
+    <div class="annonces">
+      <% @annonces.each do |annonce| %>
+        <div class="annonce">
+          <a class="annonce__link" href="<%= annonce_path(annonce) %>">
+            <div class="annonce__link__container">
+              <p class="annonce__title"><%= annonce.title %></p>
+              <p class="annonce__location"><%= annonce.location %></p>
+              <p class="annonce__status"><%= annonce.status %></p>
+            </div>
+          </a>
+          <div class="annonce__utilities">
+            <div class="annonce__infos">
+              <p class="annonce__debut"><%= annonce.start %></p>
+              <p class="annonce__fin"><%= annonce.end %></p>
+            </div>
+            <% if policy(annonce).edit? %>
+            <div class="annonce__actions">
+              <p><%= link_to 'Edit', edit_annonce_path(annonce) %></p>
+              <p><%= link_to 'Destroy', annonce, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% if policy(@annonces).show? %>
+    <p class="annonce__add"><%= link_to 'New Annonce', new_annonce_path %><p>
+  <% end %>
+</div>
 <br>
 
-<% if policy(@annonces).show? %>
-  <%= link_to 'New Annonce', new_annonce_path %>
-<% end %>
+
