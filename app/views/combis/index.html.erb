@@ -7,7 +7,7 @@
 <div class="container">
   <h1>Tous les <span class="text__red">Combis</span></h1>
   <div class="combis">
-    <% Combi.all.each do |combi| %>
+    <% @combis.each do |combi| %>
       <div class="combi">
       <a href="<%= combi_path(combi) %>">
       <img class="combi__img" src="<%= combi.avatar.url %>">
@@ -17,11 +17,11 @@
           <h2> <%= combi.marque %> </h2>
           <p> <%= combi.year %> </p>
         </div>
-        <% if policy(@combis).edit? %>
-        <div class="combi__actions">
-          <p><%= link_to 'Edit', edit_combi_path(combi) %></p>
-          <p><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-        </div>
+        <% if policy(combi).edit? %>
+          <div class="combi__actions">
+            <p><%= link_to 'Edit', edit_combi_path(combi) %></p>
+            <p><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          </div>
         <% end %>
       </div>
       </div>
