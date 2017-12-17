@@ -1,36 +1,67 @@
+<%# A virer  %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
+<%= stylesheet_link_tag "combi.css" %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Marque:</strong>
-  <%= @combi.marque %>
-</p>
+<div class="combi__header" style="background: url(<%= @combi.avatar.url %>) no-repeat center center;">
+  <form action="/pages/results" method="GET">
 
-<p>
-  <strong>Year:</strong>
-  <%= @combi.year %>
-</p>
 
-<p>
-  <strong>Owner:</strong>
-  <%= @combi.owner %>
-</p>
+    <button class="combi__button">
 
-<p>
-  <strong>Kilometers:</strong>
-  <%= @combi.kilometers %>
-</p>
+      <svg width="20px" height="30px" viewBox="0 0 50 80" xml:space="preserve">
+        <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+      45.63,75.8 0.375,38.087 45.63,0.375 "/>
+      </svg> 
 
-<p>
-  <strong>Fueltype:</strong>
-  <%= @combi.fueltype %>
-</p>
+    </button>
 
-<div>
-  <h3>Photos<h3>
-  <%= image_tag @combi.avatar.url %>
+  </form>
+
+  <h1 class="combi__title"> <%= @combi.marque %></h1>
+
+</div>
+
+<div class="combi__content">
+
+<h2 class="combi__content__title">À propos du véhicule</h2>
+
+  <div class="combi__content__list">
+
+    <p class="combi__content__list__entry">
+      <span>Marque:</span>
+      <%= @combi.marque %>
+    </p>
+
+    <p class="combi__content__list__entry">
+      <span>Year:</span>
+      <%= @combi.year %>
+    </p>
+
+    <p class="combi__content__list__entry">
+      <span>Owner:</span>
+      <%= @combi.owner %>
+    </p>
+
+    <p class="combi__content__list__entry">
+      <span>Kilometers:</span>
+      <%= @combi.kilometers %>
+    </p>
+
+    <p class="combi__content__list__entry">
+      <span>Fueltype:</span>
+      <%= @combi.fueltype %>
+    </p>
+
+  </div>
+
 </div>
 
 <% if policy(@combi).edit? %>
   <%= link_to 'Edit', edit_combi_path(@combi) %> |
 <% end %>
 <%= link_to 'Back', combis_path %>
+
