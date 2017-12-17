@@ -13,7 +13,7 @@
 
   <div class="combis">
   
-    <% Combi.all.each do |combi| %>
+    <% @combis.each do |combi| %>
 
       <div class="combi">
 
@@ -28,11 +28,11 @@
           <h2> <%= combi.marque %> </h2>
           <p> <%= combi.year %> </p>
         </div>
-        <% if policy(@combis).edit? %>
-        <div class="combi__actions">
-          <p><%= link_to 'Edit', edit_combi_path(combi) %></p>
-          <p><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-        </div>
+        <% if policy(combi).edit? %>
+          <div class="combi__actions">
+            <p><%= link_to 'Edit', edit_combi_path(combi) %></p>
+            <p><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          </div>
         <% end %>
         
       </div>
@@ -50,8 +50,3 @@
 <% if policy(@combis).show? %>
   <%= link_to 'New Combi', new_combi_path %>
 <% end %>
-
-<!-- <% if policy(@combis).edit? %>
-          <td><%= link_to 'Edit', edit_combi_path(combi) %></td>
-          <td><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-<% end %>  %> -->
