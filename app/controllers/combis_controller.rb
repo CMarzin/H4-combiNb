@@ -11,6 +11,7 @@ class CombisController < ApplicationController
   # GET /combis/1
   # GET /combis/1.json
   def show
+    render layout: false
     @combi = Combi.find(params[:id])
     authorize @combi
   end

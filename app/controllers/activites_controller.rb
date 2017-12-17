@@ -11,6 +11,7 @@ class ActivitesController < ApplicationController
   # GET /activites/1
   # GET /activites/1.json
   def show
+    render layout: false
     @activite = Activite.find(params[:id])
     authorize @activite
   end

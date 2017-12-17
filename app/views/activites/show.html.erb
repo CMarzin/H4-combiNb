@@ -1,19 +1,38 @@
+<%# A virer  %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
+<%= stylesheet_link_tag "activite.css" %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Titre:</strong>
-  <%= @activite.titre %>
-</p>
+<div class="activite__header" style="background: url(<%= @activite.image.url %>) no-repeat center center;">
+  <form action="/pages/results" method="GET">
 
-<p>
-  <strong>Description:</strong>
-  <%= @activite.description %>
-</p>
+    <input type="hidden" name="ville" value="<%= @activite.location %>">
 
-<p>
-  <strong>Location:</strong>
-  <%= @activite.location %>
-</p>
+    <button class="activite__button">
 
-<%= link_to 'Edit', edit_activite_path(@activite) %> |
-<%= link_to 'Back', activites_path %>
+      <svg width="20px" height="30px" viewBox="0 0 50 80" xml:space="preserve">
+        <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+      45.63,75.8 0.375,38.087 45.63,0.375 "/>
+      </svg> 
+
+    </button>
+
+  </form>
+
+  <h1 class="activite__title"> <%= @activite.titre %></h1>
+
+</div>
+
+<div class="activite__content">
+
+  <p class="activite__content__header">Description</p>
+  <p class="activite__content__text"><%= @activite.description %></p>
+
+</div>
+
+
+
+

@@ -1,0 +1,31 @@
+<%# A virer  %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
+
+<%= stylesheet_link_tag "combiList.css" %>
+
+<div class="container">
+
+  <form class="form__index" action="/pages/combiList" method="GET">
+    <input class="input__index" type="text" placeholder="Cet input ne sert à rien">
+  </form>
+
+  <h1>Proche de <span class="text__red">vous</span></h1>
+
+  <div class="combis">
+  
+    <% Combi.all.each do |combi| %>
+
+      <a class="combi" href="<%= combi_path(combi) %>">
+      
+      <img class="combi__img" src="<%= combi.avatar.url %>">
+      <h2> <%= combi.marque %> </h2>
+      
+      </a>
+
+    <% end %>
+
+  </div>
+
+</div>
