@@ -5,6 +5,16 @@
   margin-bottom: 30px;
 }
 
+.field__info {
+  width: 50vw;
+  color: #4A4A4A;
+  font-family: 'avenir-next';
+  font-style: normal;
+  text-align: center;
+  display: inline-block;
+  
+}
+
 .new_user {
   display: flex;
   flex-direction: column;
@@ -13,14 +23,24 @@
 }
 
 .new_user input {
-  width: 50vw;
-  border: none;
-  border-bottom: 1px solid #AAA;
+  width: 80vw;
+  height: 30px;
+  border: 1px solid #EEE;
+  border-radius: 3px;
   font-family: 'avenir-next';
   font-size: 1.2em;
-  text-align: center;
+  text-align: left;
   color: #4A4A4A;
   margin-bottom: 20px;
+  padding-left: 5px;
+  line-height: 30px;
+}
+
+@media (min-width: 692px) {
+  .new_user input {
+    width: 60vw;
+    height: 40px;
+  }
 }
 
 .field__login {
@@ -61,7 +81,150 @@
 }
 
 .field__validate input {
-  background-color: white;
+  background-color: rgb(211, 84, 70);
   border: none;
   font-family: 'avenir-next-bold';
+  font-size: 1.2em;
+  text-align: center;
+  color: white;
+  box-shadow: 2px 2px 4px #DDD;
+}
+
+.field__validate input:hover {
+  background-color:  rgb(209, 119, 109);
+}
+
+/* COMBIS */
+
+.form__combi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .field__combi{
+  width: 50vw;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: center;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+} */
+
+.field__combi input {
+  width: 80vw;
+  height: 30px;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  line-height: 30px;
+}
+
+.combi__validate input {
+  width: 80vw;
+  height: 40px;
+}
+
+@media (min-width: 692px) {
+  .field__combi input {
+    width: 60vw;
+    height: 40px;
+  }
+
+  .combi__validate input {
+    width: 60vw;
+    height: 40px;
+  }
+}
+
+
+
+.field__combi__avatar {
+  width: 80vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+/* ACTIVITES */
+
+.field__activite input{
+  width: 80vw;
+  height: 30px;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  line-height: 30px;
+}
+
+.text-area__activite textarea{
+  width: 80vw;
+  height: 30vw;
+  border: none;
+  background-color: #FAFAFA; 
+  box-shadow: 2px 2px 4px #EEE;
+  border-radius: 3px;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: left;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+}
+
+.text-area__activite label {
+  margin-bottom: 10px;
+}
+
+.form__activites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field__activite__image {
+  width: 80vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.field__activite__image img {
+  max-width: 50vw;
+  max-height: 30vw;
+  object-fit: cover;
+}
+
+.activites__validate input {
+  width: 80vw;
+  height: 40px;
+}
+
+@media (min-width: 692px) {
+  .activites__validate input {
+    width: 60vw;
+  }
+
+  .field__activite input {
+    width: 60vw;
+    height: 40px;
+  }
+
+  .field__activite__image {
+    width: 60vw;
+  }
+
+  .text-area__activite textarea {
+    width: 60vw;
+  }
 }
