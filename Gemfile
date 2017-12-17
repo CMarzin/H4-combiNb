@@ -67,5 +67,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "travis", "= 1.8.8"
 
 gem 'paperclip'
-# Added at 2017-12-17 18:01:57 +0100 by hadrienlepoutre:
-gem "jquery-ui-rails", "~> 6.0"

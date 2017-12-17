@@ -10,13 +10,12 @@
             <div class="annonce__link__container">
               <p class="annonce__title"><%= annonce.title %></p>
               <p class="annonce__location"><%= annonce.location %></p>
-              <p class="annonce__status"><%= annonce.status %></p>
             </div>
           </a>
           <div class="annonce__utilities">
             <div class="annonce__infos">
-              <p class="annonce__debut"><%= annonce.start %></p>
-              <p class="annonce__fin"><%= annonce.end %></p>
+              <p class="annonce__debut"><%= annonce.startTime %></p>
+              <p class="annonce__fin"><%= annonce.endTime %></p>
             </div>
             <% if policy(annonce).edit? %>
             <div class="annonce__actions">
