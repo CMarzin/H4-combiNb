@@ -16,18 +16,20 @@ body {
 /* SEARCH INPUT */
 .form__index {
   align-self: center;
+  width: 80vw;
+
 }
 
 
 .input__index {
-  width: 80vw;
+  width: 75vw;
   height: 50px;
   margin-top: 15px;
-  padding-left: 40px;
+  padding-left: 7vw;
   padding-top: 5px;
 
   border: none;
-  border-radius: 3pxs;
+  border-radius: 3px;
   box-shadow: 0 0 4px #DDD;
   
   font-size: 1em;
@@ -37,7 +39,7 @@ body {
   /* manages the icon */
   background-image: url("/assets/search-icon.svg");
   background-repeat: no-repeat;
-  background-position: 13px 16px;
+  background-position: 2vw 16px;
 }
 
 
