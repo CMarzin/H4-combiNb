@@ -32,12 +32,12 @@
 
     <div class="field">
       <%= form.label :start %>
-      <%= form.date_field :start, id: :annonce_start %>
+      <%= form.date_field :start, id: :annonce_start, value: (@annonce.start.to_s.empty? ? Date.today : @annonce.start) %>
     </div>
 
     <div class="field">
       <%= form.label :end %>
-      <%= form.date_field :end, id: :annonce_end %>
+      <%= form.date_field :end, id: :annonce_end, value: (@annonce.end.to_s.empty? ? Date.today + 1 : @annonce.end) %>
     </div>
 
     <div class="field">
