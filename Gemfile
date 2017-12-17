@@ -33,7 +33,6 @@ gem 'pundit'
 # gem 'capistrano-rails', group: :development
 
 gem 'pg', '~> 0.21'
-gem 'jquery-rails'
 
 group :production do
   gem 'pg', '~> 0.21'
