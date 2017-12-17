@@ -12,7 +12,7 @@
 
 <p>
   <strong>Creator:</strong>
-  <%= @annonce.creator_id %>
+  <%= User.find(@annonce.creator_id).username %>
 </p>
 
 <p>
@@ -32,8 +32,11 @@
 
 <p>
   <strong>Combi:</strong>
-  <%= @annonce.combi_id %>
+  <% combi = Combi.find(@annonce.combi_id) %>
+  <%= link_to "#{combi.marque} #{combi.year}", combi_path(combi.id) %>
 </p>
+
+<h3>Réserver cette annonce</h3>
 
 <%= form_for(@booking, url: {controller: 'bookings', action: 'create'}) do |form| %>
 
@@ -41,7 +44,7 @@
     <%= form.label :startTime %>
     <%= form.text_field :startTime, 
       id: :booking_startTime,
-      value: (@booking.startTime.to_s.empty? ? Date.today : @booking.startTime),
+      value: (@annonce.startTime.to_s.empty? ? Date.today : @booking.startTime),
       :class => "datepicker start",
       data: { availability: @annonce.availability }
     %>
@@ -51,7 +54,7 @@
     <%= form.label :endTime %>
     <%= form.text_field :endTime,
       id: :booking_endTime,
-      value: (@booking.endTime.to_s.empty? ? Date.today + 1 : @booking.endTime),
+      value: (@annonce.endTime.to_s.empty? ? Date.today + 1 : @booking.endTime),
       :class => "datepicker end"
     %>
   </div>
@@ -59,8 +62,6 @@
   <div class="field">
     <%= form.hidden_field :annonce_id, value: @annonce.id %>
   </div>
-
-  <%= @annonce.bookings %>
 
   <div class="field">
     <%= form.hidden_field :client_id, value: current_user[:id] %>
