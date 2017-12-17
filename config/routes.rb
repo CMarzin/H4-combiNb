@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   resources :bookings
   resources :activites
-  resources :annonces do
-    resources :bookings
-  end
+  resources :annonces
   resources :combis
   devise_for :users
+
   root 'home#index'
   
   get 'home/index'

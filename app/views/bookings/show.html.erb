@@ -17,7 +17,7 @@
 
 <p>
   <strong>Client:</strong>
-  <%= @booking.client_id %>
+  <%= User.find(@booking.client_id).username %>
 </p>
 
 <%= link_to 'Edit', edit_booking_path(@booking) %> |
