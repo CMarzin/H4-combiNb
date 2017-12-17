@@ -13,33 +13,6 @@ body {
   align-self: center;
 }
 
-form {
-  align-self: center;
-}
-
-/* SEARCH INPUT */
-
-input {
-  width: 80vw;
-  height: 50px;
-  margin-top: 15px;
-  padding-left: 40px;
-  padding-top: 5px;
-
-  border: none;
-  border-radius: 3px;
-  box-shadow: 0 0 4px #DDD;
-  
-  font-size: 1em;
-  font-family: 'avenir-next';
-  color: #4A4A4A;
-
-  /* manages the icon */
-  background-image: url("/assets/search-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 13px 16px;
-}
-
 /* TEXT STUFF */ 
 
 h1 {
@@ -73,13 +46,72 @@ h2 {
 
 .combi {
   width: 100%;
+  text-decoration: none;
+}
+
+.combi__link:hover {
+  background-color: #F9F9F9;
+  height: 100%;
 }
 
 .combi__img {
   width: 100%;
-  max-height: 54vw;
+  height: 54vw;
   border-radius: 3px;
+  object-fit: cover;
+  overflow: visible;
+}
 
+.combi__img:hover {
+  box-shadow: 2px 2px 4px #DDD;
+}
+
+.combi__utilities {
+  display: flex;
+}
+
+.combi__info {
+  width: 50%;
+}
+
+.combi__info h2 {
+  margin: 5px 0 0 0 ;
+}
+
+.combi__info p {
+  margin: 0 0 20px 0;
+}
+
+.combi__actions p {
+  margin: 0;
+}
+
+.combi__add {
+  width: 80vw;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  font-family: 'avenir-next-bold';
+  font-size: 1.7em;
+  background-color: rgb(211, 84, 70);
+  border-radius: 3px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.combi__add a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(211, 84, 70);
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.combi__add:hover {
+  box-shadow: 2px 2px 4px #AAA;
 }
 
 @media (min-width:692px) {
@@ -91,15 +123,28 @@ h2 {
   .combi__img {
     max-height: 25vw;
   }
+
+  .combi__add {
+    width: 60vw;
+  }
 }
 
 @media (min-width:1000px) {
+  .combis:after {
+    content: "";
+    width: 30%;
+  }
+
   .combi {
     width: 30%;
   }
 
   .combi__img {
     max-height: 16vw;
+  }
+
+  .combi__add{
+    width: 40vw;
   }
 }
 

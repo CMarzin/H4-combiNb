@@ -18,4 +18,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( index.css )
 Rails.application.config.assets.precompile += %w( activite.css )
 Rails.application.config.assets.precompile += %w( combiList.css )
+Rails.application.config.assets.precompile += %w( activiteList.css )
+Rails.application.config.assets.precompile += %w( combi.css )
+Rails.application.config.assets.precompile += %w( forms.css )
 Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/

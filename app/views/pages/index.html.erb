@@ -5,8 +5,8 @@
 <%= stylesheet_link_tag "index.css" %>
 <div class="container">
 
-  <form action="/pages/results" method="GET">
-    <input type="text" placeholder="Choisissez votre ville" name="ville">
+  <form class="form__index" action="/pages/results" method="GET">
+    <input class="input__index" type="text" placeholder="Choisissez votre ville" name="ville">
   </form>
 
   <h1>Explorer <span class="text__red">Combinb</span></h1>
@@ -23,5 +23,20 @@
   </div>
 
   <h1>Aux alentours de <span class="text__red">Paris</span></h1>
+
+  <div class="activites__index">
+
+    <% Activite.where(location: 'Paris').each do |act| %>
+
+    <a class="activites__index__container" href="<%= activite_path(act) %>">
+
+      <img class="activites__index__image" src="<%= act.image.url %>" alt="">
+      <p class="activites__index__titre"><%= act.titre %></p>
+
+    </a>
+
+    <% end %>
+  
+  </div>
 
 </div>
