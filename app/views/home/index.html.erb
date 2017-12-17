@@ -1,2 +1,42 @@
-<h1>Home</h1>
-<p>Hello world ! Welcome to combnb</p>
+<%# A virer  %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
+<%= stylesheet_link_tag "index.css" %>
+<div class="container">
+
+  <form class="form__index" action="/pages/results" method="GET">
+    <input class="input__index" type="text" placeholder="Choisissez votre ville" name="ville">
+  </form>
+
+  <h1 class="index__mainTitle">Explorer <span class="text__red">Combinb</span></h1>
+
+  <div class="explore">
+    <a class="explore__item" href="<%= combis_path %>" >
+      <div class="explore__image explore__combi__image"></div>
+      <p class="explore__text">Combis</p>
+    </a>
+    <a class="explore__item" href="<%= activites_path %>">
+      <div class="explore__image explore__activite__image"></div>
+      <p class="explore__text">Activités</p>
+    </a>
+  </div>
+
+  <h1>Aux alentours de <span class="text__red">Paris</span></h1>
+
+  <div class="activites__index">
+
+    <% Activite.where(location: 'Paris').each do |act| %>
+
+    <a class="activites__index__container" href="<%= activite_path(act) %>">
+
+      <img class="activites__index__image" src="<%= act.image.url %>" alt="">
+      <p class="activites__index__titre"><%= act.titre %></p>
+
+    </a>
+
+    <% end %>
+  
+  </div>
+
+</div>

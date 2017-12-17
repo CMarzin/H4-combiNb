@@ -11,13 +11,24 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20171217180335) do
-
   create_table "activites", force: :cascade do |t|
     t.string "titre"
     t.text "description"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category"
+    t.string "categorie"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer "user_id"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer "stars_number"
   end
 
   create_table "annonces", force: :cascade do |t|
@@ -30,6 +41,16 @@ ActiveRecord::Schema.define(version: 20171217180335) do
     t.integer "combi_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.string "startTime"
+    t.string "endTime"
+    t.string "annonce_id"
+    t.string "client_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "stars_number"
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -54,6 +75,18 @@ ActiveRecord::Schema.define(version: 20171217180335) do
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.integer "user_id"
+    t.integer "stars_number"
+    t.index ["user_id"], name: "index_combis_on_user_id"
+  end
+
+  create_table "rates", force: :cascade do |t|
+    t.integer "rate"
+    t.string "rateable_type"
+    t.integer "rateable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "created_by"
+    t.index ["rateable_type", "rateable_id"], name: "index_rates_on_rateable_type_and_rateable_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -78,6 +111,7 @@ ActiveRecord::Schema.define(version: 20171217180335) do
     t.string "avatar_content_type"
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer "stars_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true

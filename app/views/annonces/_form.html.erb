@@ -1,4 +1,8 @@
-<%= form_with(model: annonce, local: true) do |form| %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
+
+<%= form_with(model: annonce, local: true, :class => 'form__annonces') do |form| %>
   <% if annonce.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(annonce.errors.count, "error") %> prohibited this annonce from being saved:</h2>
@@ -15,22 +19,27 @@
     <%= form.hidden_field :creator_id, id: :annonce_creator_id, value: current_user[:id] %>
 
   <%# Visible Fields %>
-    <div class="field">
+    <div class="field__annonce">
       <%= form.label :title %>
       <%= form.text_field :title, id: :annonce_title %>
     </div>
 
-    <div class="field">
+    <div class="field__annonce">
       <%= form.label :description %>
       <%= form.text_area :description, id: :annonce_description, size: "100x30" %>
     </div>
 
-    <div class="field">
+    <div class="field__annonce">
+      <%= form.label :status %>
+      <%= form.select :status, ['Available', 'Booked', 'Draft'],id: :annonce_status %>
+    </div>
+
+    <div class="field__annonce">
       <%= form.label :location %>
       <%= form.text_field :location, id: :annonce_location %>
     </div>
 
-    <div class="field">
+    <div class="field__annonce">
       <%= form.label :startTime %>
       <%= form.text_field :startTime,
         id: :annonce_start,
@@ -39,7 +48,7 @@
       %>
     </div>
 
-    <div class="field">
+    <div class="field__annonce">
       <%= form.label :endTime %>
       <%= form.text_field :endTime,
         id: :annonce_end,
@@ -48,12 +57,12 @@
       %>
     </div>
 
-    <div class="field">
+    <div class="field__annonce">
       <%= form.label :combi %>
       <%= collection_select(:annonce, :combi_id, Combi.all, :id, :combi_infos) %>
     </div>
 
-    <div class="actions">
+    <div class="actions annonces__validate field__validate">
       <%= form.submit %>
     </div>
 <% end %>

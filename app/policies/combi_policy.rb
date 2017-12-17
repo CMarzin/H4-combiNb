@@ -8,7 +8,7 @@ class CombiPolicy < ApplicationPolicy
   end
 
   def new?
-    true
+    return true if user.present?
     # raise Pundit::NotAuthorizedError, "must be logged in" unless user.present?
   end
 

@@ -1,4 +1,8 @@
-<%= form_with(model: activite, local: true) do |form| %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
+
+<%= form_with(model: activite, local: true, :class => 'form__activites') do |form| %>
   <% if activite.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(activite.errors.count, "error") %> prohibited this activite from being saved:</h2>
@@ -11,19 +15,31 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :titre %>
-    <%= form.text_field :titre, id: :activite_titre %>
+  <div class="field__activite">
+    <%= form.text_field :titre, id: :activite_titre, placeholder: 'Titre' %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :activite_description %>
+  <div class="text-area__activite">
+    <%= form.text_area :description, id: :activite_description, placeholder: 'Description' %>
   </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :activite_location %>
+  <div class="field__activite">
+    <%= form.text_field :location, id: :activite_location, placeholder: 'Ville' %>
+  </div>
+
+  <div class="form-group field__activite__image">
+    <%= form.file_field :image %>
+    <%= image_tag @activite.image.url %>
+  </div>
+
+  <div class="form-group">
+    <%= form.file_field :image %>
+    <%= image_tag @activite.image.url %>
+  </div>
+
+  <div class="form-group">
+    <%= form.file_field :stars_number %>
+    <%= form.text_field :stars_number, id: :activite_stars_number %>
   </div>
 
   <div class="actions">

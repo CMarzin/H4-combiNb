@@ -1,4 +1,10 @@
-<%= form_with(model: combi, local: true) do |form| %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
+
+<%= stylesheet_link_tag "forms.css" %>
+
+<%= form_with(model: combi, local: true, :class => 'form__combi') do |form| %>
   <% if combi.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(combi.errors.count, "error") %> prohibited this combi from being saved:</h2>
@@ -11,12 +17,12 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field__combi">
     <%= form.label :marque %>
     <%= form.text_field :marque, id: :combi_marque %>
   </div>
 
-  <div class="field">
+  <div class="field__combi">
     <%= form.label :year %>
     <%= form.text_field :year, id: :combi_year %>
   </div>
@@ -25,23 +31,22 @@
     <%= form.hidden_field :owner, id: :combi_owner, current_user[:id] %>
   </div>
 
-  <div class="field">
+  <div class="field__combi">
     <%= form.label :kilometers %>
     <%= form.number_field :kilometers, id: :combi_kilometers %>
   </div>
 
-  <div class="field">
+  <div class="field__combi">
     <%= form.label :fueltype %>
     <%= form.select :fueltype, options_for_select(["Diesel", "Super 95", "Super 98"]) %>
   </div>
 
-  <div class="form-group">    
+  <div class="form-group field__combi__avatar">    
     <%= form.label :avatar %>
     <%= form.file_field :avatar %>
-    <%= image_tag @combi.avatar.url %>
   </div>
 
-  <div class="actions">
+  <div class="actions combi__validate field__validate ">
     <%= form.submit %>
   </div>
 <% end %>
