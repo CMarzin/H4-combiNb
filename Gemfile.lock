@@ -259,7 +259,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.5)
   jquery-rails
-  jquery-ui-rails (~> 6.0)
+  jquery-ui-rails
   listen (>= 3.0.5, < 3.2)
   paperclip
   pg (~> 0.21)
