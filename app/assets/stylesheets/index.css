@@ -66,3 +66,9 @@ h1 {
   position: absolute;
   color: gold;
 }
+
+.rated > .gold:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
