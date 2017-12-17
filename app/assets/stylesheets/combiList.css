@@ -86,6 +86,34 @@ h2 {
   margin: 0;
 }
 
+.combi__add {
+  width: 80vw;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  font-family: 'avenir-next-bold';
+  font-size: 1.7em;
+  background-color: rgb(211, 84, 70);
+  border-radius: 3px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.combi__add a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(211, 84, 70);
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.combi__add:hover {
+  box-shadow: 2px 2px 4px #AAA;
+}
+
 @media (min-width:692px) {
   .combi {
     width: 47%;
@@ -94,6 +122,10 @@ h2 {
 
   .combi__img {
     max-height: 25vw;
+  }
+
+  .combi__add {
+    width: 60vw;
   }
 }
 
@@ -109,6 +141,10 @@ h2 {
 
   .combi__img {
     max-height: 16vw;
+  }
+
+  .combi__add{
+    width: 40vw;
   }
 }
 
