@@ -12,10 +12,41 @@
 //
 //= require jquery3
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
+  
+    $(function() {
+        let start = $('.start').val();
+        let end = $('.end').val();
+        console.log(start);
+        console.log(end);
+
+        let datepick_input = $('.datepicker')
+        
+        availableDates = datepick_input.data('availability')
+
+        console.log(availableDates)
+
+        function available(date) {
+            dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+            console.log(dmy)
+            if ($.inArray(dmy, availableDates) != -1) {
+                console.log("true")
+                return [true, "","Available"];
+            } else {
+                console.log("false")
+                return [false,"","unAvailable"];
+            }
+        }
+
+        datepick_input.datepicker({
+            dateFormat: "yy-mm-dd",
+            beforeShowDay: available
+        });
+    });
 
     var allRatingSpan =  document.querySelectorAll('.rating span');
     var clicked = false;
@@ -80,5 +111,3 @@ $(document).on('turbolinks:load', function() {
     });
 
   });
-
-

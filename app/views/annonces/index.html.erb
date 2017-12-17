@@ -7,7 +7,6 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th>Status</th>
       <th>Creator</th>
       <th>Location</th>
       <th>Start</th>
@@ -22,12 +21,12 @@
       <tr>
         <td><%= annonce.title %></td>
         <td><%= annonce.description %></td>
-        <td><%= annonce.status %></td>
-        <td><%= annonce.creator_id %></td>
+        <td><%= User.find(annonce.creator_id).username %></td>
         <td><%= annonce.location %></td>
-        <td><%= annonce.start %></td>
-        <td><%= annonce.end %></td>
-        <td><%= annonce.combi_id %></td>
+        <td><%= annonce.startTime %></td>
+        <td><%= annonce.endTime %></td>
+        <% combi = Combi.find(annonce.combi_id) %>
+        <td><%= "#{combi.marque} #{combi.year}" %></td>
         <td><%= link_to 'Show', annonce %></td>        
         <% if policy(annonce).show_button? %>
           <td><%= link_to 'Edit', edit_annonce_path(annonce) %></td>
