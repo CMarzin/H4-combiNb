@@ -1,17 +1,8 @@
 class RatesController < ApplicationController
-  # before_action :set_rate, only: [:create, :edit]
 
   def rate
     @rate = Rate.create(rate_params)
     render :json => @rate
-
-    # respond_to do |format|
-    #   if @rating.save
-    #     format.js { rendfer :show, status: :created }        
-    #     format.html { redirect_to Activite, notice: 'Combi was successfully created.' }
-    #     format.json { render :show, status: :created }
-    #   end
-    # end
   end
 
   private

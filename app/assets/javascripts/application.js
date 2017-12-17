@@ -38,7 +38,7 @@ $(document).on('turbolinks:load', function() {
       }
     });
 
-    $('.rate_button').click(function (e) {
+    $('.rating span').click(function (e) {
       clicked = true
 
       mydata = {
@@ -55,7 +55,10 @@ $(document).on('turbolinks:load', function() {
           allRatingSpan[i].classList.remove('gold')
         }
       }
+    });
 
+    $('.rate_button').click(function () {
+      // console.log('mydata', mydata)
       if (mydata.rate === undefined) {
         alert('you need to choose a rate');
       } else {
@@ -64,6 +67,9 @@ $(document).on('turbolinks:load', function() {
           url: "/rates",
           data: { rates: mydata },
           success: function(response){
+            $('.rate_button').addClass('hide')
+            $('.just_rated').removeClass('hide')
+            $('.not_rated_yet').addClass('hide')
             console.log('response success', response)
           },
           error: function(response){
@@ -71,8 +77,8 @@ $(document).on('turbolinks:load', function() {
           }
         });
       }
-
     });
+
   });
 
 
