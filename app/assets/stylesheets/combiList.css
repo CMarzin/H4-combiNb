@@ -13,33 +13,6 @@ body {
   align-self: center;
 }
 
-form {
-  align-self: center;
-}
-
-/* SEARCH INPUT */
-
-input {
-  width: 80vw;
-  height: 50px;
-  margin-top: 15px;
-  padding-left: 40px;
-  padding-top: 5px;
-
-  border: none;
-  border-radius: 3px;
-  box-shadow: 0 0 4px #DDD;
-  
-  font-size: 1em;
-  font-family: 'avenir-next';
-  color: #4A4A4A;
-
-  /* manages the icon */
-  background-image: url("/assets/search-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 13px 16px;
-}
-
 /* TEXT STUFF */ 
 
 h1 {

@@ -1,0 +1,67 @@
+@import "fonts.css";
+
+.field__title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_user input {
+  width: 50vw;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'avenir-next';
+  font-size: 1.2em;
+  text-align: center;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+}
+
+.field__login {
+  width: 80vw;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.field__pwd {
+  width: 80vw;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.field__remember {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+
+  margin-bottom: 30px;
+}
+
+.field__remember input {
+  width: auto;
+}
+
+#user_remember_me {
+  margin: 0 10px 0 0;
+}
+
+.field__validate input {
+  background-color: white;
+  border: none;
+  font-family: 'avenir-next-bold';
+}
