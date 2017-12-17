@@ -18,8 +18,8 @@
       <tr>
         <td><%= booking.startTime %></td>
         <td><%= booking.endTime %></td>
-        <td><%= Annonce.find(booking.annonce_id).title %></td>
-        <td><%= User.find(booking.client_id).username %></td>
+        <td><%= booking.annonce_id %></td>
+        <td><%= booking.client_id %></td>
         <td><%= link_to 'Show', booking %></td>
         <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
         <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>

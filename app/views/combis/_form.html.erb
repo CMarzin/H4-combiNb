@@ -22,7 +22,7 @@
   </div>
 
   <div class="field">
-    <%= form.hidden_field :owner, id: :combi_owner %>
+    <%= form.hidden_field :owner, id: :combi_owner, current_user[:id] %>
   </div>
 
   <div class="field">

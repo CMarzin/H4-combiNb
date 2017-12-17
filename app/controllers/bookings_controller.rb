@@ -5,26 +5,20 @@ class BookingsController < ApplicationController
   # GET /bookings.json
   def index
     @bookings = Booking.all
-    authorize @bookings
   end
 
   # GET /bookings/1
   # GET /bookings/1.json
   def show
-    @booking = Booking.find(params[:id])
-    authorize @booking
   end
 
   # GET /bookings/new
   def new
     @booking = Booking.new
-    authorize @booking
-    @booking[:client_id] = current_user[:id]
   end
 
   # GET /bookings/1/edit
   def edit
-    authorize @booking
   end
 
   # POST /bookings

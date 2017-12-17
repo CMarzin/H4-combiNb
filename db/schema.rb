@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20171216231114) do
     t.string "location"
     t.string "start"
     t.string "end"
-    t.string "combi_id"
+    t.integer "combi_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20171216231114) do
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.integer "user_id"
-    t.index ["user_id"], name: "index_combis_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
