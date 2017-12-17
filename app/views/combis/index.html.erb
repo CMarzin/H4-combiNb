@@ -1,45 +1,35 @@
+<%# A virer  %>
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+</header>
 <p id="notice"><%= notice %></p>
-
-<h1>Combis</h1>
-
-<!--<ul>
-  <li>All</li>
-  <li>My Combis</li>
-</ul> -->
-
-<table>
-  <thead>
-    <tr>
-      <th>Marque</th>
-      <th>Year</th>
-      <th>Owner</th>
-      <th>Kilometers</th>
-      <th>Fueltype</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<%= stylesheet_link_tag "combiList.css" %>
+<div class="container">
+  <h1>Tous les <span class="text__red">Combis</span></h1>
+  <div class="combis">
     <% @combis.each do |combi| %>
-      <tr>
-        <td><%= combi.marque %></td>
-        <td><%= combi.year %></td>
-        <td><%= combi.owner %></td>
-        <td><%= combi.kilometers %></td>
-        <td><%= combi.fueltype %></td>
-        <td><%= image_tag combi.avatar.url(:medium) %></td>
-        <td><%= link_to 'Show', combi %></td>
-        <% if policy(combi).edit? %>
-          <td><%= link_to 'Edit', edit_combi_path(combi) %></td>
-          <td><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>        
-      </tr>
+      <div class="combi">
+        <a class="combi__link" href="<%= combi_path(combi) %>">
+          <img class="combi__img" src="<%= combi.avatar.url %>">
+        </a>
+        <div class="combi__utilities">
+          <div class="combi__info">
+            <h2> <%= combi.marque %> </h2>
+            <p> <%= combi.year %> </p>
+          </div>
+          <% if policy(combi).edit? %>
+            <div class="combi__actions">
+              <p><%= link_to 'Edit', edit_combi_path(combi) %></p>
+              <p><%= link_to 'Destroy', combi, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
+  </div>
+  <% if policy(@combis).show? %>
+    <p class="combi__add"><%= link_to 'New Combi', new_combi_path %></p>
+  <% end %>
+</div>
 <br>
 
-<% if policy(@combis).show? %>
-  <%= link_to 'New Combi', new_combi_path %>
-<% end %>
