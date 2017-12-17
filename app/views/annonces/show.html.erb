@@ -36,42 +36,44 @@
   <%= link_to "#{combi.marque} #{combi.year}", combi_path(combi.id) %>
 </p>
 
-<h3>Réserver cette annonce</h3>
+<% if current_user[:id] != @annonce.creator_id.to_i %>
+  <h3>Réserver cette annonce</h3>
 
-<%= form_for(@booking, url: {controller: 'bookings', action: 'create'}) do |form| %>
+  <%= form_for(@booking, url: {controller: 'bookings', action: 'create'}) do |form| %>
 
-  <div class="field">
-    <%= form.label :startTime %>
-    <%= form.text_field :startTime, 
-      id: :booking_startTime,
-      value: (@annonce.startTime.to_s.empty? ? Date.today : @booking.startTime),
-      :class => "datepicker start",
-      data: { availability: @annonce.availability }
-    %>
-  </div>
+    <div class="field">
+      <%= form.label :startTime %>
+      <%= form.text_field :startTime, 
+        id: :booking_startTime,
+        value: (@annonce.startTime.to_s.empty? ? Date.today : @booking.startTime),
+        :class => "datepicker start",
+        data: { availability: @annonce.availability }
+      %>
+    </div>
 
-  <div class="field">
-    <%= form.label :endTime %>
-    <%= form.text_field :endTime,
-      id: :booking_endTime,
-      value: (@annonce.endTime.to_s.empty? ? Date.today + 1 : @booking.endTime),
-      :class => "datepicker end"
-    %>
-  </div>
-  
-  <div class="field">
-    <%= form.hidden_field :annonce_id, value: @annonce.id %>
-  </div>
+    <div class="field">
+      <%= form.label :endTime %>
+      <%= form.text_field :endTime,
+        id: :booking_endTime,
+        value: (@annonce.endTime.to_s.empty? ? Date.today + 1 : @booking.endTime),
+        :class => "datepicker end"
+      %>
+    </div>
+    
+    <div class="field">
+      <%= form.hidden_field :annonce_id, value: @annonce.id %>
+    </div>
 
-  <div class="field">
-    <%= form.hidden_field :client_id, value: current_user[:id] %>
-  </div>
+    <div class="field">
+      <%= form.hidden_field :client_id, value: current_user[:id] %>
+    </div>
 
-   <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
 <% end %>
-  
+
 
 <% if policy(@annonce).edit? %>
   <%= link_to 'Edit', edit_annonce_path(@annonce) %> |

@@ -1,5 +1,6 @@
 class AnnoncesController < ApplicationController
   before_action :set_annonce, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:index]
 
   # GET /annonces
   # GET /annonces.json
