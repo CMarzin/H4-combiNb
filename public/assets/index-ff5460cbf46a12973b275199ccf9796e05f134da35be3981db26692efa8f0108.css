@@ -1,0 +1,225 @@
+@import url('fonts.css');
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #F9F9F9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  align-self: center;
+}
+
+/* SEARCH INPUT */
+.form__index {
+  align-self: center;
+  width: 80vw;
+
+}
+
+
+.input__index {
+  width: 75vw;
+  height: 50px;
+  margin-top: 15px;
+  padding-left: 7vw;
+  padding-top: 5px;
+
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 4px #DDD;
+  
+  font-size: 1em;
+  font-family: 'avenir-next';
+  color: #4A4A4A;
+
+  /* manages the icon */
+  background-image: url("/assets/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 2vw 16px;
+}
+
+
+.explore {
+  display: flex;
+}
+
+.explore__item {
+  margin-right: 2vw;
+
+  text-decoration: none;
+}
+
+.explore__item:hover {
+  background-color: #F9F9F9;
+}
+
+.explore__text {
+  font-family: 'avenir-next';
+  color: #4A4A4A;
+  font-size: 0.8em;
+}
+
+.explore__image {
+  height: 100px;
+  width: 100px;
+  overflow: visible;
+  background-size: cover;
+}
+
+.explore__image:hover {
+  box-shadow: 2px 2px 4px #AAA;
+}
+
+.explore__combi__image {
+  background-image: url('/assets/combi_default.jpg');
+}
+
+.explore__activite__image {
+  background-image: url('/assets/birdies.jpg');
+}
+
+/* TEXT-RELATED STUFF */
+h1 {
+  font-family: "avenir-next-bold";
+  font-size: 1.7em;
+  color: #3A3A3A;
+}
+
+.index__mainTitle {
+  margin-top: 30px;
+}
+
+.text__red {
+  color: #F52A12;
+}
+
+.text {
+  font-family: "avenir-next";
+  color: #3A3A3A;
+  font-size: 15px;
+}
+
+/* ACTIVITIES */
+
+.activites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.activite {
+
+  text-decoration: none;
+}
+
+.activite__img {
+  width: 39vw;
+  height: 25vw;
+
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+@media (min-width: 692px) {
+  .activites:after {
+    content: "";
+    width: 26vw;
+  }
+
+  .activite__img {
+    width: 26vw;
+    height: 17vw;
+  }
+} 
+
+@media (min-width: 1000px) {
+  .activites:after {
+    content: "";
+    width: 19vw;
+  }
+
+  .activite__img {
+    width: 19vw;
+    height: 12vw;
+  }
+}
+
+/* INDEX ACTIVITES */
+
+.activites__index {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.activites__index__titre {
+  font-family: 'avenir-next';
+  color:#4A4A4A;
+  margin-top: 3px;
+}
+
+.activites__index__container {
+  width: 39vw;
+  text-decoration: none;
+}
+
+.activites__index__container:hover {
+  background-color: #F9F9F9;
+}
+
+.activites__index__image {
+  width: 100%;
+  height: 27vw;
+  overflow: visible;
+  object-fit: cover;
+}
+
+.activites__index__image:hover {
+  box-shadow: 2px 2px 4px #AAA;
+}
+
+@media (min-width: 692px) {
+  .activites__index__container {
+    width: 26vw;
+  }
+
+  .activites__index__image {
+    height: 15vw;
+  }
+
+  .activites__index:after {
+    content: "";
+    width: 26vw;
+  }
+}
+
+.rate_button {
+  width: 50px;
+}
+
+.rating > .not-rated {
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.rating > .gold:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
+
+.rated > .gold:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+}
+
+.hide {
+  transition: 0.5s ease;
+  opacity: 0;
+  z-index: -99999;
+}
