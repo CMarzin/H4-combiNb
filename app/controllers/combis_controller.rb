@@ -33,12 +33,6 @@ class CombisController < ApplicationController
     @combi = Combi.new(combi_params)
     # link the current user to the combi it create
     @combi[:user_id] = current_user[:id]
-
-    # Rate.new(
-    #   rateable_id: @combi[:user_id],
-    #   rateable_type: "Combi",
-    #   rate: 4
-    # ).save
     
     respond_to do |format|
       if @combi.save

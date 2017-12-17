@@ -5,9 +5,6 @@ class PagesController < ApplicationController
   def results
     render layout: false
     @activites = Activite.all
-    # filtering_params(params).each do |value|
-    #   @activites = @activites.public_send(value) if value.present? 
-    #end
   end
 
 

@@ -16,9 +16,10 @@
 
   <p>you already rated this person</p>
   <p>you rated <%= @user.username %> : <%= @rated_by_current_user.rate %></p>
+
   <div class="rated">
     <% for i in 1..@max_rating do %>
-      <% if i <= @rated_by_current_user.rate %>
+      <% if i <= @results_of_user_rating %>
         <span class="gold" data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User" data-value="<%= i %>">☆</span>
       <% else %>
         <span data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User">☆</span>
@@ -26,12 +27,12 @@
     <% end %>
   </div>
 
-  <% elsif current_user.id === @user.id && @rated_by_current_user %>
+  <% elsif current_user.id === @user.id && @results_of_user_rating %>
 
   <p>Your rating :</p>
   <div class="rating">
     <% for i in 1..@max_rating do %>
-      <% if i <= @rated_by_current_user.rate %>
+      <% if i <= @results_of_user_rating %>
         <span class="gold" data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User" data-value="<%= i %>">☆</span>
       <% else %>
         <span data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User">☆</span>
@@ -41,7 +42,9 @@
 
   <% else %>
   
-  <p>Not rated this person yet</p>
+  <p class="not_rated_yet">Not rated this person yet</p>
+  <p class="just_rated hide">You successfully rated this user</p>
+
   <div class="rating">
     <% for i in 1..@max_rating do %>
       <span class="not-rated" data-creator-id="<%= current_user.id %>" data-user-id="<%= @user.id %>" data-type="User" data-value="<%= i %>">☆</span>
