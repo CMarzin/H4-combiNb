@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Starttime:</strong>
+  <%= @booking.startTime %>
+</p>
+
+<p>
+  <strong>Endtime:</strong>
+  <%= @booking.endTime %>
+</p>
+
+<p>
+  <strong>Annonce:</strong>
+  <%= @booking.annonce.title %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= User.find(@booking.client_id).username %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>
