@@ -16,7 +16,7 @@
   <% end %>
 
   <%# Hidden Fields %>
-    <%= form.hidden_field :creator_id, id: :annonce_creator_id %>
+    <%= form.hidden_field :creator_id, id: :annonce_creator_id, value: current_user[:id] %>
 
   <%# Visible Fields %>
     <div class="field__annonce">
@@ -39,14 +39,22 @@
       <%= form.text_field :location, id: :annonce_location %>
     </div>
 
-    <div class="field__annonce">
-      <%= form.label :start %>
-      <%= form.datetime_field :start, id: :annonce_start %>
+    <div class="field">
+      <%= form.label :startTime %>
+      <%= form.text_field :startTime,
+        id: :annonce_start,
+        value: (@annonce.startTime.to_s.empty? ? Date.today : @annonce.startTime),
+        class: "datepicker start" 
+      %>
     </div>
 
-    <div class="field__annonce">
-      <%= form.label :end %>
-      <%= form.datetime_field :end, id: :annonce_end %>
+    <div class="field">
+      <%= form.label :endTime %>
+      <%= form.text_field :endTime,
+        id: :annonce_end,
+        value: (@annonce.endTime.to_s.empty? ? Date.today + 1 : @annonce.endTime),
+        class: "datepicker end" 
+      %>
     </div>
 
     <div class="field__annonce">

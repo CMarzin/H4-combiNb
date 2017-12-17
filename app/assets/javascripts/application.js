@@ -14,71 +14,40 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery3
+//= require jquery_ujs
+//= require jquery-ui
 
-$(document).on('turbolinks:load', function() {
 
-    var allRatingSpan =  document.querySelectorAll('.rating span');
-    var clicked = false;
+$(document).on("turbolinks:load", ()=>{
 
-    $('.rating span').hover(function (e) {
-      for (var i = 0; i < 5; i++) {
-        if (i < e.target.dataset.value) {
-          allRatingSpan[i].classList.add('gold')
-        } else {
-          allRatingSpan[i].classList.remove('gold')
+    $(function() {
+        let start = $('.start').val();
+        let end = $('.end').val();
+        console.log(start);
+        console.log(end);
+
+        let datepick_input = $('.datepicker')
+        
+        availableDates = datepick_input.data('availability')
+
+        console.log(availableDates)
+
+        function available(date) {
+            dmy = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+            console.log(dmy)
+            if ($.inArray(dmy, availableDates) != -1) {
+                console.log("true")
+                return [true, "","Available"];
+            } else {
+                console.log("false")
+                return [false,"","unAvailable"];
+            }
         }
-      }
-    });
 
-    $('.rating').mouseleave(function() {
-      if (clicked === false) {
-        for (var i = 0; i < 5; i++) {
-          allRatingSpan[i].classList.remove('gold')
-        }
-      }
-    });
-
-    $('.rating span').click(function (e) {
-      clicked = true
-
-      mydata = {
-        rate: e.target.dataset.value,
-        rateable_type: e.target.dataset.type,
-        rateable_id: e.target.dataset.userId,
-        created_by: e.target.dataset.creatorId,
-      };
-
-      for (var i = 0; i < 5; i++) {
-        if (i < e.target.dataset.value) {
-          allRatingSpan[i].classList.add('gold')
-        } else {
-          allRatingSpan[i].classList.remove('gold')
-        }
-      }
-    });
-
-    $('.rate_button').click(function () {
-      // console.log('mydata', mydata)
-      if (mydata.rate === undefined) {
-        alert('you need to choose a rate');
-      } else {
-        $.ajax({
-          type: "POST", 
-          url: "/rates",
-          data: { rates: mydata },
-          success: function(response){
-            $('.rate_button').addClass('hide')
-            $('.just_rated').removeClass('hide')
-            $('.not_rated_yet').addClass('hide')
-            console.log('response success', response)
-          },
-          error: function(response){
-            console.log('response error', response)
-          }
+        datepick_input.datepicker({
+            dateFormat: "yy-mm-dd",
+            beforeShowDay: available
         });
-      }
     });
-
-  });
-
-
+})

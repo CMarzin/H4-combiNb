@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     # rewrite default url for users
     get '/users/:username/edit', to: 'devise/registrations#edit'
   end
-  resources :users, :only =>[:show]    
+  resources :users, :only =>[:show]
   
   get 'home/index'
   get 'pages/index', to: 'pages#index', as: 'inte'
