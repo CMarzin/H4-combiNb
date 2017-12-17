@@ -1,0 +1,98 @@
+@import 'fonts.css';
+
+.annonces {
+  width: 80vw;
+  display: flex; 
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.annonce {
+  margin-top: 30px;
+  width: 100%;
+  text-decoration: none;
+}
+
+.annonce__link {
+  text-decoration: none;
+}
+
+.annonce__link__container {
+  width: 100%;
+
+  background-color: #EEE;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 5px;
+}
+
+.annonce__title {
+  font-family: 'avenir-next-bold';
+  font-size: 1.5em;
+}
+
+.annonce__status {
+  font-family: 'avenir-next-bold';
+}
+
+.annonce__utilities {
+  display: flex;
+  justify-content: space-between;
+}
+
+.annonce__infos p {
+  margin: 3px 0 0 0;
+}
+
+.annonce__actions p {
+  margin: 3px 0 0 0;
+  text-align: right;
+}
+
+.annonce__add {
+  width: 80vw;
+  height: 40px;
+  background-color: rgb(211, 84, 70);
+  text-align: center;
+  line-height: 40px;
+  border-radius: 3px;
+}
+
+.annonce__add:hover {
+  box-shadow: 2px 2px 4px #AAA;
+}
+
+.annonce__add a {
+  font-family: 'avenir-next-bold';
+  font-size: 1.7em;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.annonce__add a:hover {
+  background-color: rgb(211, 84, 70);
+}
+
+@media (min-width: 692px) {
+  .annonce {
+    width: 47%
+  }
+
+  
+}
+
+@media (min-width: 1000px) {
+  .annonces:after {
+    content: "";
+    width: 30%;
+  }
+
+  .annonce {
+    width: 30%;
+  }
+}

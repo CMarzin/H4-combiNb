@@ -82,6 +82,10 @@ body {
   background-image: url('/assets/birdies.jpg');
 }
 
+.explore__annonce__image {
+  background-image: url('/assets/annonces.jpg');
+}
+
 /* TEXT-RELATED STUFF */
 h1 {
   font-family: "avenir-next-bold";
